@@ -1,0 +1,25 @@
+/* Styles spécifiques pour les boutons de la navbar */
+.download-button {
+    transform: scale(0.9); /* Taille ajustée */
+    margin: 0;
+    padding: 0.3rem 0.25rem;
+}
+
+.sparkle {
+    width: 20px;
+    height: 20px;
+}
+
+.text_button {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    padding: 0.75rem 1.25rem;
+    white-space: nowrap;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+    .download-button {
+        transform: scale(0.8); /* Taille ajustée pour mobile */
+    }
+}

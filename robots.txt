@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio.marcelassogba.com/sitemap.xml
+
+# Allow all bots to access everything
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: Baiduspider
+Allow: /

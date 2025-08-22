@@ -1,0 +1,47 @@
+{
+  "name": "Marcel Assogba - Portfolio",
+  "short_name": "MA Portfolio",
+  "description": "Portfolio professionnel de Marcel Assogba - Développeur Web & Digital Marketer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#191a1a",
+  "theme_color": "#191a1a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "images/marcelassogba blanc.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/marcelassogba blanc.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "web development", "digital marketing"],
+  "lang": "fr",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "À propos",
+      "url": "/#mac-window-section",
+      "description": "En savoir plus sur Marcel Assogba"
+    },
+    {
+      "name": "Portfolio",
+      "url": "/#projects",
+      "description": "Voir mes projets"
+    },
+    {
+      "name": "Contact",
+      "url": "/#contact",
+      "description": "Me contacter"
+    }
+  ]
+}
