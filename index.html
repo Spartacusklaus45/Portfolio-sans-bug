@@ -439,14 +439,14 @@
         function enterSite() {
             document.body.classList.add('fade-out');
             setTimeout(() => {
-                window.location.href = 'main.html';
+                window.location.href = '/mon-travail';
             }, 800);
         }
 
         // Preload main site resources for faster transition
         const link = document.createElement('link');
         link.rel = 'prefetch';
-        link.href = 'main.html';
+        link.href = '/mon-travail';
         document.head.appendChild(link);
 
         // Optional: Auto-enter after 5 seconds (uncomment if desired)

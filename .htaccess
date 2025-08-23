@@ -1,0 +1,24 @@
+RewriteEngine On
+
+# Specific rewrite for mon-travail
+RewriteRule ^mon-travail/?$ main.html [NC,L]
+
+# Remove .html extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redirect main.html to mon-travail
+RewriteCond %{THE_REQUEST} /main\.html [NC]
+RewriteRule ^ /mon-travail? [NC,L,R=301]
+
+# Redirect other .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Set default page
+DirectoryIndex index.html
+
+# Optional: Force HTTPS (uncomment if needed)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

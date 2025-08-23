@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://portfolio.marcelassogba.com/sitemap.xml
+Sitemap: https://marcelassogba.vercel.app/sitemap.xml
 
 # Allow all bots to access everything
 User-agent: Googlebot
@@ -13,3 +13,6 @@ User-agent: GPTBot
 Allow: /
 User-agent: Baiduspider
 Allow: /
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
