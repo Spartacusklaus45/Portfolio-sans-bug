@@ -442,15 +442,16 @@ body {
         }
 
         #home.hero .terminal-loader {
-            margin: 0;
+            margin: 0 auto;
             transform: scale(0.8);
+            text-align: center;
         }
 
         #home.hero .laptop {
             position: relative;
             left: 50%;
-            transform: translateX(-50%) scale(0.55);
-            max-height: 32vh;
+            transform: translateX(-50%) scale(0.4);
+            max-height: 25vh;
             margin: 0;
             width: fit-content;
         }
@@ -481,6 +482,9 @@ body {
     .laptop {
         max-width: 240px;
         margin: 1rem auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .d-flex.align-items-center.gap-3 {
@@ -492,16 +496,39 @@ body {
 
     .button {
         width: auto;
-        margin: 0.1rem 0;
-        padding: 0.1rem 0.2rem;
-        font-size: 0.65rem;
-        transform: scale(0.8);
+        margin: 0.05rem 0;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.45rem;
+        line-height: 1;
         min-height: auto;
+        transform: scale(0.5);
     }
     
     .button__text {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
         line-height: 1;
+    }
+    
+    .button__text span {
+        font-size: 0.7rem;
+    }
+    
+    .button__circle {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    
+    .button__icon {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    
+    .button .sparkle {
+        width: 1rem;
+    }
+    
+    .button .text_button {
+        font-size: 0.7rem;
     }
 
     .social-card {
@@ -512,10 +539,10 @@ body {
     }
 
     .social-link {
-        width: 25px;
-        height: 25px;
+        width: 50px;
+        height: 50px;
         margin: 0 2px;
-        font-size: 0.7rem;
+        font-size: 1.2rem;
         padding: 0;
     }
 
@@ -1407,17 +1434,13 @@ body {
 /* MacBook Animation */
 .laptop {
     transform: scale(0.9);
-    margin: 0;
+    margin: 0 auto;
     max-width: 100%;
-    float: right;
+    width: 100%;
+    display: block;
 }
 
 @media (max-width: 768px) {
-    .laptop {
-        transform: scale(0.7);
-        margin: 2rem 0;
-    }
-
     .hero .display-4 {
         font-size: 2.5rem;
     }
@@ -1428,10 +1451,6 @@ body {
 }
 
 @media (max-width: 576px) {
-    .laptop {
-        transform: scale(0.5);
-    }
-
     .hero .display-4 {
         font-size: 2rem;
     }
@@ -1673,10 +1692,12 @@ body {
     border-width: 1px 2px 0 2px;
     box-shadow: inset 0 -2px 8px 0 #6c7074;
     height: 24px;
-    margin-top: -10px;
+    margin: -10px auto 0 auto;
     position: relative;
     width: 620px;
     z-index: 9;
+    left: 0;
+    right: 50%;
 }
 
 .keyboard::after {
