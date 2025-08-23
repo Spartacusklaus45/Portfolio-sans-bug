@@ -1,8 +1,10 @@
 const texts = [
     'Spécialiste Marketing Digital',
-    'Développeur Web',
+    'Développeur Web Full-Stack',
     'Designer UI/UX',
-    'Créatif & Passionné'
+    'Créateur de Contenu Digital',
+    'Expert en Stratégie Digitale',
+    'Passionné de Technologie'
 ];
 
 let textIndex = 0;
@@ -16,12 +18,12 @@ const newTextDelay = 2000;
 let animationFrameId;
 
 function type() {
-    // Cancel any existing animation frame
-    if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-    }
-
     const typedTextSpan = document.querySelector('.typed-text');
+    if (!typedTextSpan) {
+        console.log('typed-text element not found, stopping animation');
+        return;
+    }
+    
     const currentText = texts[textIndex];
     
     if (isDeleting) {
@@ -43,31 +45,32 @@ function type() {
         typeSpeed = 500;
     }
 
-    animationFrameId = requestAnimationFrame(function() {
-        setTimeout(function() {
-            type();
-        }, typeSpeed);
-    });
+    setTimeout(type, typeSpeed);
 }
 
-// Add cursor style
+// Add cursor style and animation
 const style = document.createElement('style');
 style.innerHTML = `
     .typed-text {
         border-right: 0.2em solid #0f0;
         animation: blinkCursor 0.7s step-end infinite;
     }
+    @keyframes blinkCursor {
+        0%, 50% { border-color: #0f0; }
+        51%, 100% { border-color: transparent; }
+    }
 `;
 document.head.appendChild(style);
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Check for mobile device
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    console.log('DOM loaded, starting typing animation...');
     
-    // Adjust timing for mobile devices
-    const typingSpeed = isMobile ? 100 : 50;
-    const backspaceSpeed = isMobile ? 50 : 25;
-    const pauseDuration = isMobile ? 1500 : 2000;
-
-    setTimeout(type, 1000);
+    // Ensure the typed-text element exists before starting
+    const typedTextElement = document.querySelector('.typed-text');
+    if (typedTextElement) {
+        console.log('Found .typed-text element, starting animation');
+        setTimeout(type, 1000);
+    } else {
+        console.log('Element .typed-text not found');
+    }
 });

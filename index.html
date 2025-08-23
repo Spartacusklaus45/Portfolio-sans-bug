@@ -1,1459 +1,437 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr" itemscope itemtype="https://schema.org/WebPage">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="alternate" hreflang="fr" href="https://portfolio.marcelassogba.com">
-    <meta property="og:locale" content="fr_FR">
-    <meta http-equiv="Content-Language" content="fr">
-    <meta name="language" content="French">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="MA Portfolio">
-    <link rel="apple-touch-icon" href="images/marcelassogba blanc.png">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="MA Portfolio">
-    <meta name="msapplication-TileColor" content="#191a1a">
-    <meta name="msapplication-TileImage" content="images/marcelassogba blanc.png">
-    <link rel="preconnect" href="https://www.google-analytics.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marcel Assogba - Développeur Web & Digital Marketer. Expert en développement web, UI/UX design et marketing digital. Portfolio professionnel présentant mes projets et compétences.">
-    <meta name="keywords" content="Marcel Assogba, développeur web, digital marketer, portfolio, UI/UX design, développement web, marketing digital, Bénin">
-    <meta name="author" content="Marcel Assogba">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#191a1a">
-    <meta property="og:title" content="Marcel Assogba - Développeur Web & Digital Marketer">
-    <meta property="og:description" content="Portfolio professionnel de Marcel Assogba, expert en développement web et marketing digital.">
-    <meta property="og:image" content="images/marcelassogba blanc.png">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Marcel Assogba - Développeur Web & Digital Marketer">
-    <meta name="twitter:description" content="Portfolio professionnel de Marcel Assogba, expert en développement web et marketing digital.">
-    <meta name="twitter:image" content="images/marcelassogba blanc.png">
-    <link rel="canonical" href="https://portfolio.marcelassogba.com">
-    <!-- Mobile optimizations and critical CSS -->
-    <script>
-        // Early mobile detection and optimization
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (isMobile) {
-            document.documentElement.classList.add('mobile');
-            // Preload mobile optimizations
-            const mobileOptLink = document.createElement('link');
-            mobileOptLink.rel = 'preload';
-            mobileOptLink.as = 'script';
-            mobileOptLink.href = './js/mobile-optimizations.js';
-            document.head.appendChild(mobileOptLink);
-        }
-    </script>
-    <style>
-        /* Critical styles for above-the-fold content */
-        body { background: #191a1a; color: #fff; margin: 0; opacity: 1; }
-        @keyframes fadeIn { to { opacity: 1; } }
-        .hero { min-height: 100vh; position: relative; overflow: hidden; transform: translateZ(0); -webkit-transform: translateZ(0); contain: paint layout; }
-        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: transparent; transition: background-color 0.3s ease; transform: translateZ(0); -webkit-transform: translateZ(0); }
-        .navbar.scrolled { background-color: rgba(25, 26, 26, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-        @media (max-width: 768px) {
-            .hero { overflow: hidden; }
-            .navbar { background-color: rgba(25, 26, 26, 0.95); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
-            .navbar-toggler { padding: 4px 8px; }
-            .navbar-nav { padding: 10px 0; }
-        }
-    </style>
-    <!-- Preload critical fonts and images -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" href="css/critical.css">
-    </noscript>
-    
-    <!-- Preload LCP image -->
-    <link rel="preload" as="image" href="images/marcelassogba blanc.webp" fetchpriority="high">
-    
-    <!-- Resource hints -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    
-    <!-- Prefetch next-page resources -->
-    <link rel="prefetch" href="#skills">
-    <link rel="prefetch" href="#projects">
-    
-    
-    <script type="application/ld+json">
-    [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Portfolio de Marcel Assogba - Développeur Web & Digital Marketer",
-      "author": {
-        "@type": "Person",
-        "name": "Marcel Assogba"
-      },
-      "datePublished": "2025-07-31",
-      "dateModified": "2025-07-31",
-      "description": "Portfolio professionnel de Marcel Assogba, expert en développement web et marketing digital, présentant ses compétences, projets et réalisations.",
-      "keywords": ["développement web", "marketing digital", "UI/UX design", "portfolio", "Bénin"],
-      "articleSection": "Portfolio",
-      "wordCount": "1000"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "Compétences en Développement Web et Marketing Digital",
-      "description": "Expertise et compétences techniques en développement web et marketing digital",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "Développement Web",
-          "text": "Création de sites web professionnels avec HTML, CSS, JavaScript, React et Node.js"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "UI/UX Design",
-          "text": "Conception d'interfaces utilisateur intuitives et d'expériences utilisateur optimisées"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Marketing Digital",
-          "text": "Stratégies de marketing digital, SEO, et optimisation des conversions"
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Marcel Assogba",
-      "url": "https://portfolio.marcelassogba.com",
-      "image": "images/marcelassogba blanc.png",
-      "sameAs": [
-        "https://github.com/marcelassogba",
-        "https://www.linkedin.com/in/marcel-assogba/",
-        "https://www.facebook.com/marcelassogba"
-      ],
-      "jobTitle": "Développeur Web & Digital Marketer",
-      "description": "Expert en développement web, UI/UX design et marketing digital",
-      "knowsAbout": ["Développement Web", "UI/UX Design", "Marketing Digital", "HTML", "CSS", "JavaScript", "React", "Node.js"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Quels services propose Marcel Assogba ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Marcel Assogba propose des services de développement web, UI/UX design et marketing digital. Il est spécialisé dans la création de sites web professionnels et d'expériences utilisateurs optimisées."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Quelles sont les compétences techniques de Marcel Assogba ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Marcel Assogba maîtrise HTML, CSS, JavaScript, React, Node.js et d'autres technologies web modernes. Il a également une expertise en UI/UX design et en marketing digital."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Comment contacter Marcel Assogba ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Vous pouvez contacter Marcel Assogba via LinkedIn, GitHub, WhatsApp ou Facebook. Il est également possible de le contacter directement via le formulaire de contact de son portfolio."
-        }
-      }]
-    }
-    ]
-    </script>
-    <link rel="icon" type="image/svg+xml" href="images/marcelassogba 2.png">
-    <link rel="icon" type="image/png" href="images/marcelassogba 2.png" sizes="32x32">
-    <title>Marcel Assogba - Développeur Web & Digital Marketer</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Marcel Assogba - Portfolio</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-      /* Font fallbacks */
-      body { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; }
-      code, pre { font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
-    </style>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <style>
-      /* Critical CSS for above-the-fold content */
-      :root{--primary-color:#007bff;--secondary-color:#6c757d;--dark-color:#343a40;--light-color:#f8f9fa}
-      body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:#fff;background-color:#191a1a}
-      .navbar{position:fixed;top:0;left:0;right:0;z-index:1030;background-color:transparent;transition:all .3s ease-in-out}
-      .hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
-      .profile-img{width:150px;height:150px;object-fit:cover;border-radius:50%}
-      @media(max-width:768px){.profile-img{width:120px;height:120px}}
-    </style>
-    <link rel="stylesheet" href="css/combined.min.css" media="print" onload="this.media='all'">
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script src="js/analytics.js" defer></script>
-
-    <script>
-      // Register service worker for caching
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
-        });
-      }
-
-      // Deep linking and smooth scroll
-      document.addEventListener('DOMContentLoaded', function() {
-        // Handle deep links
-        if (window.location.hash) {
-          const targetElement = document.querySelector(window.location.hash);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-            // Add focus ring for accessibility
-            targetElement.setAttribute('tabindex', '-1');
-            targetElement.focus({ preventScroll: true });
-          }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        // Smooth scroll for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: 'smooth' });
-              // Update URL without page jump
-              history.pushState(null, null, targetId);
-              // Add focus ring for accessibility
-              targetElement.setAttribute('tabindex', '-1');
-              targetElement.focus({ preventScroll: true });
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            background-color: #191a1a;
+            background-image: linear-gradient(0deg, transparent 24%, rgba(114, 114, 114, 0.1) 25%, rgba(114, 114, 114, 0.1) 26%, transparent 27%,transparent 74%, rgba(114, 114, 114, 0.1) 75%, rgba(114, 114, 114, 0.1) 76%, transparent 77%,transparent),
+                linear-gradient(90deg, transparent 24%, rgba(114, 114, 114, 0.1) 25%, rgba(114, 114, 114, 0.1) 26%, transparent 27%,transparent 74%, rgba(114, 114, 114, 0.1) 75%, rgba(114, 114, 114, 0.1) 76%, transparent 77%,transparent);
+            background-size: 55px 55px;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader-container {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 10;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInScale 1s ease-out 0.3s forwards;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .welcome-title {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.7s forwards;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1s forwards;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 2s forwards;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .enter-btn {
+            --white: #ffe7ff;
+            --purple-100: #f4b1fd;
+            --purple-200: #d190ff;
+            --purple-300: #c389f2;
+            --purple-400: #8e26e2;
+            --purple-500: #5e2b83;
+            --radius: 25px;
+
+            border-radius: var(--radius);
+            outline: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            background: transparent;
+            letter-spacing: -0.5px;
+            border: 0;
+            position: relative;
+            width: 260px;
+            height: 60px;
+            transform: rotate(300deg) skewX(10deg);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+        }
+
+        .enter-btn .bg {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            filter: blur(1px);
+        }
+
+        .enter-btn .bg::before,
+        .enter-btn .bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: calc(var(--radius) * 1.1);
+            background: var(--purple-500);
+        }
+
+        .enter-btn .bg::before {
+            filter: blur(5px);
+            transition: all 0.3s ease;
+            box-shadow:
+                -7px 6px 0 0 rgb(115 75 155 / 40%),
+                -14px 12px 0 0 rgb(115 75 155 / 30%),
+                -21px 18px 4px 0 rgb(115 75 155 / 25%),
+                -28px 24px 8px 0 rgb(115 75 155 / 15%),
+                -35px 30px 12px 0 rgb(115 75 155 / 12%),
+                -42px 36px 16px 0 rgb(115 75 155 / 8%),
+                -56px 42px 20px 0 rgb(115 75 155 / 5%);
+        }
+
+        .enter-btn .wrap {
+            border-radius: inherit;
+            overflow: hidden;
+            height: 100%;
+            transform: translate(6px, -6px);
+            padding: 3px;
+            background: linear-gradient(
+                to bottom,
+                var(--purple-100) 0%,
+                var(--purple-400) 100%
+            );
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .enter-btn .content {
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            position: relative;
+            height: 100%;
+            gap: 16px;
+            border-radius: calc(var(--radius) * 0.85);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: linear-gradient(
+                to bottom,
+                var(--purple-300) 0%,
+                var(--purple-400) 100%
+            );
+            box-shadow:
+                inset -2px 12px 11px -5px var(--purple-200),
+                inset 1px -3px 11px 0px rgb(0 0 0 / 35%);
+            color: var(--white);
+            text-shadow: -1px 1px 2px var(--purple-500);
+        }
+
+        .enter-btn:hover .wrap {
+            transform: translate(8px, -8px);
+        }
+
+        .enter-btn:active .bg::before {
+            filter: blur(5px);
+            opacity: 0.7;
+            box-shadow:
+                -7px 6px 0 0 rgb(115 75 155 / 40%),
+                -14px 12px 0 0 rgb(115 75 155 / 25%),
+                -21px 18px 4px 0 rgb(115 75 155 / 15%);
+        }
+
+        .enter-btn:active .content {
+            box-shadow:
+                inset -1px 12px 8px -5px rgba(71, 0, 137, 0.4),
+                inset 0px -3px 8px 0px var(--purple-200);
+        }
+
+        .enter-btn:active .wrap {
+            transform: translate(3px, -3px);
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) { width: 4px; height: 4px; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 6px; height: 6px; left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { width: 3px; height: 3px; left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { width: 5px; height: 5px; left: 40%; animation-delay: 0.5s; }
+        .particle:nth-child(5) { width: 4px; height: 4px; left: 50%; animation-delay: 1.5s; }
+        .particle:nth-child(6) { width: 6px; height: 6px; left: 60%; animation-delay: 2.5s; }
+        .particle:nth-child(7) { width: 3px; height: 3px; left: 70%; animation-delay: 0.8s; }
+        .particle:nth-child(8) { width: 5px; height: 5px; left: 80%; animation-delay: 1.8s; }
+        .particle:nth-child(9) { width: 4px; height: 4px; left: 90%; animation-delay: 3s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-          });
-        });
-
-        // Intersection Observer for animations and tracking
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              if (entry.target) entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-          });
-        });
-        document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+        }
 
-        // Keyboard navigation improvements
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Tab') {
-            document.body.classList.add('user-is-tabbing');
-          }
-        });
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8) rotate(-10deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
 
-        // Skip to main content for accessibility
-        const skipLink = document.createElement('a');
-        skipLink.href = '#main-content';
-        skipLink.className = 'skip-to-main-content';
-        skipLink.textContent = 'Passer au contenu principal';
-        document.body.insertBefore(skipLink, document.body.firstChild);
-      });
-    </script>
+        .profile-img:hover {
+            transform: scale(1.05) rotate(5deg);
+            transition: all 0.3s ease;
+        }
 
-    <style>
-      .skip-to-main-content {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: var(--primary-color);
-        color: white;
-        padding: 8px;
-        z-index: 100;
-        transition: top 0.3s;
-      }
-      .skip-to-main-content:focus {
-        top: 0;
-      }
-      .user-is-tabbing *:focus {
-        outline: 2px solid var(--primary-color) !important;
-        outline-offset: 2px !important;
-      }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10vh) rotate(180deg);
+            }
+        }
+
+        .fade-out {
+            animation: fadeOut 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 2.3s forwards;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .loader-container {
+                padding: 1rem;
+            }
+            
+            .profile-img {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .social-links {
+                gap: 0.8rem;
+            }
+            
+            .social-link {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .enter-btn {
+                padding: 0.8rem 1.5rem;
+                min-height: 48px;
+            }
+            
+            .footer {
+                bottom: 10px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .particle {
+                animation: none;
+            }
+            
+            .logo, .subtitle, .enter-btn {
+                animation: none;
+                opacity: 1;
+            }
+        }
     </style>
-
 </head>
 <body>
-    <div class="background-container"></div>
-    <!-- Navigation -->
-    <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="navigation" aria-label="Menu principal">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-20" itemscope itemtype="https://schema.org/SiteNavigationElement">
-            <!-- Logo -->
-            <a href="#" class="flex items-center space-x-3">
-                <img src="images/marcelassogba blanc.png" alt="Marcel Assogba Logo" class="h-16">
-            </a>
-
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="lg:hidden text-gray-200 hover:text-white focus:outline-none" aria-label="Menu mobile" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-
-            <!-- Desktop menu -->
-            <div class="hidden lg:flex lg:items-center lg:space-x-3">
-                <a href="#home" class="" aria-current="page">
-                <div class="dots_border"></div>
-                <span class="text_button">Accueil</span>
-                </a>
-                <a href="#mac-window-section" class="">
-                <div class="dots_border"></div>
-                <span class="text_button">À propos</span>
-                </a>
-                <a href="#skills" class="">
-                <div class="dots_border"></div>
-                <span class="text_button">Compétences</span>
-                </a>
-                <a href="#projects" class="">
-                <div class="dots_border"></div>
-                <span class="text_button">Portfolio</span>
-                </a>
-                <a href="#contact" class="">
-                <div class="dots_border"></div>
-                <span class="text_button">Contact</span>
-                </a>
-                <a href="#contact" class="download-button">
-                <div class="dots_border"></div>
-                <span class="text_button">Travaillons ensemble</span>
-                </a>
-            </div>
-            </div>
-
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="lg:hidden hidden absolute top-20 left-0 w-full bg-neutral-900/90 backdrop-blur-md">
-            <div class="px-4 pt-4 pb-6 space-y-2">
-                <a href="#home" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 hover:bg-neutral-800">Accueil</a>
-                <a href="#mac-window-section" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 hover:bg-neutral-800">À propos</a>
-                <a href="#skills" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 hover:bg-neutral-800">Compétences</a>
-                <a href="#projects" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 hover:bg-neutral-800">Portfolio</a>
-                <a href="#contact" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 hover:bg-neutral-800">Contact</a>
-            </div>
-            </div>
-        </div>
-    </nav>
-<path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-
-    <!-- Hero Section -->
-    <div style="height: 60px"></div>
-    <main id="main-content" role="main">
-    <section id="home" class="hero d-flex align-items-center justify-content-center" style="margin-top: -60px;" role="banner" aria-label="Accueil">
-        <div class="outer-container position-absolute w-100 h-100">
-            <div class="outer">
-                <div class="dot"></div>
-                <div class="card">
-                    <div class="ray"></div>
-                    <div class="line topl"></div>
-                    <div class="line leftl"></div>
-                    <div class="line bottoml"></div>
-                    <div class="line rightl"></div>
-                </div>
-            </div>
-        </div>
-        <!-- Colored Balls Animation -->
-        <aside class="container-loader">
-            <article style="--color: #ff6347; --i: 12px; --d: 3.4s" class="ball"></article>
-            <article style="--color: #00ced1; --i: 18px; --d: 6.1s" class="ball"></article>
-            <article style="--color: #adff2f; --i: 10px; --d: 2.9s" class="ball"></article>
-            <article style="--color: #9370db; --i: 16px; --d: 7.8s" class="ball"></article>
-            <article style="--color: #ff1493; --i: 14px; --d: 4.6s" class="ball"></article>
-            <article style="--color: #00bfff; --i: 11px; --d: 3.3s" class="ball"></article>
-            <article style="--color: #7fff00; --i: 17px; --d: 5.5s" class="ball"></article>
-            <article style="--color: #dc143c; --i: 13px; --d: 6.7s" class="ball"></article>
-            <article style="--color: #8a2be2; --i: 19px; --d: 8.2s" class="ball"></article>
-            <article style="--color: #48d1cc; --i: 15px; --d: 9.1s" class="ball"></article>
-            <article style="--color: #ff4500; --i: 14px; --d: 4.2s" class="ball"></article>
-            <article style="--color: #00ff7f; --i: 16px; --d: 5.8s" class="ball"></article>
-            <article style="--color: #ba55d3; --i: 10px; --d: 7.3s" class="ball"></article>
-            <article style="--color: #1e90ff; --i: 18px; --d: 6.4s" class="ball"></article>
-            <article style="--color: #ffa500; --i: 20px; --d: 10s" class="ball"></article>
-            <article style="--color: #ff69b4; --i: 12px; --d: 3.7s" class="ball"></article>
-            <article style="--color: #00fa9a; --i: 11px; --d: 2.6s" class="ball"></article>
-            <article style="--color: #9400d3; --i: 17px; --d: 6.9s" class="ball"></article>
-            <article style="--color: #ffb6c1; --i: 13px; --d: 5.3s" class="ball"></article>
-            <article style="--color: #20b2aa; --i: 19px; --d: 7.7s" class="ball"></article>
-        </aside>
-        <div class="container position-relative">
-            <div class="row align-items-center gy-4">
-                <div class="col-12 col-md-6 text-center text-md-start order-2 order-md-1 mb-4 mb-md-0">
-                    <div class="name-wrapper">
-                        <div class="name-container">
-                            <span style="margin-right: 2px;">&lt;</span>
-                            <h1 class="name" style="font-size: 2.5rem; margin: 0;">Marcel Assogba</h1>
-                            <span style="margin-left: 2px;">/&gt;</span>
-                        </div>
-                    </div>
-                    <div class="terminal-loader">
-                        <div class="terminal-header">
-                            <div class="terminal-title">marcel@portfolio ~ $</div>
-                            <div class="terminal-controls">
-                                <div class="control close"></div>
-                                <div class="control minimize"></div>
-                                <div class="control maximize"></div>
-                            </div>
-                        </div>
-                        <div class="text">Je suis <span class="typed-text"></span></div>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="#contact" class="button">
-                            <p class="button__text">
-                                <span style="--index: 0;">M</span>
-                                <span style="--index: 1;">E</span>
-                                <span style="--index: 2;">  </span>
-                                <span style="--index: 3;">C</span>
-                                <span style="--index: 4;">O</span>
-                                <span style="--index: 5;">N</span>
-                                <span style="--index: 6;">T</span>
-                                <span style="--index: 7;">A</span>
-                                <span style="--index: 8;">C</span>
-                                <span style="--index: 9;">T</span>
-                                <span style="--index: 10;">E</span>
-                                <span style="--index: 11;">Z</span>
-                                <span style="--index: 12;"> </span>
-                                <span style="--index: 13;">I</span>
-                                <span style="--index: 14;">C</span>
-                                <span style="--index: 15;">I</span>
-                            </p>
-                            <div class="button__circle">
-                                <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon" width="14">
-                                    <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor"></path>
-                                </svg>
-                                <svg viewBox="0 0 14 15" fill="none" width="14" xmlns="http://www.w3.org/2000/svg" class="button__icon button__icon--copy">
-                                    <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor"></path>
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="assets/docs/CV_Marcel_Assogba.pdf" download class="download-button">
-                            <div class="dots_border"></div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle mr-0">
-                                <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"></path>
-                            </svg>
-                            <span class="text_button">Télécharger mon CV</span>
-                        </a>
-                    </div>
-                    <div class="social-card mt-4" role="navigation" aria-label="Réseaux sociaux">
-                        <a href="https://github.com/marcelassogba" class="social-link1" aria-label="GitHub de Marcel Assogba">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="1em" viewBox="0 0 496 512" role="img" aria-label="Logo GitHub"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 389.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.6.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/marcel-assogba/" class="social-link2" aria-label="LinkedIn de Marcel Assogba">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#fff"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
-                        </a>
-                        <a href="https://wa.me/+22967087928" class="social-link3">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://www.facebook.com/marcelassogba" class="social-link4">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 order-1 order-md-2">
-                    <div class="laptop">
-                        <div class="screen">
-                            <div class="header">
-                                <div class="url-bar">
-                                    <i class="fas fa-lock"></i>
-                                    portfolio.marcelassogba.com
-                                </div>
-                            </div>
-                            <div class="content">
-                                <div class="welcome-text">
-                                    <div class="glitch" data-text="Bienvenue sur mon Portfolio"></div>
-                                    <div class="code-elements">
-                                        <span class="code-line"><span class="code-keyword">const</span> developer = {</span>
-                                        <span class="code-line">  name: <span class="code-string">"Marcel Assogba"</span>,</span>
-                                        <span class="code-line">  skills: [<span class="code-string">"Web"</span>, <span class="code-string">"UI/UX"</span>, <span class="code-string">"Marketing"</span>]</span>
-                                        <span class="code-line">};</span>
-                                    </div>
-                                </div>
-                                <div class="tech-icons">
-                                    <i class="fab fa-html5"></i>
-                                    <i class="fab fa-css3-alt"></i>
-                                    <i class="fab fa-js-square"></i>
-                                    <i class="fab fa-react"></i>
-                                    <i class="fab fa-node"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="keyboard"></div>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section" aria-label="Compétences">
-        <div class="container">
-            <div class="text-center">
-            <button class="title-button" aria-expanded="false" aria-controls="skills-content">
-            <div class="bg"></div>
-            <div class="wrap">
-            <div class="content">Compétences & Outils</div>
-            </div>
-            </button>
-            </div>
-            <div class="skills-grid" style="position: relative;">
-            <!-- Design Tools -->
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="width: 100%; height: auto;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://www.adobe.com/content/dam/cc/us/en/products/ccoverview/pr_cc_app_RGB.svg" alt="Premiere Pro" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://www.adobe.com/content/dam/cc/icons/photoshop.svg" alt="Photoshop" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.worldvectorlogo.com/logos/tiktok-1.svg" alt="TikTok" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <!-- Spacebar -->
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <!-- Enter key -->
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-plain.svg" alt="Facebook" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://www.adobe.com/content/dam/cc/icons/aftereffects.svg" alt="After Effects" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://www.adobe.com/content/dam/cc/icons/illustrator.svg" alt="Illustrator" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://www.adobe.com/content/dam/cc/icons/illustrator.svg" alt="Illustrator" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <!-- Development Tools -->
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px; transform: translateZ(0); -webkit-transform: translateZ(0);">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50" loading="lazy" decoding="async">
-            </div>
-            </div>
-            </button>
-            <button class="btn-small">
-                <div class="btn-small-content">
-                <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" style="width: 50px; height: 50px;">
-                </div>
-                </div>
-                </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.worldvectorlogo.com/logos/microsoft-office-2013.svg" alt="Office" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
-            </div>
-            </div>
-            </button>
-
-            <button class="btn-small">
-            <div class="btn-small-content">
-            <div class="btn-large-icon" style="width: 8vw; height: 4vw; max-width: 50px; max-height: 25px;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" style="width: 50px; height: 50px;">
-            </div>
-            </div>
-            </button>
-            
-            </div>
-        </div>
-    </section>
-
-    <!-- Mac-Style Code Preview Section -->
-    <section id="mac-window-section" class="py-5 mac-window-section">
-        <div class="container position-relative">
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <button class="title-button">
-                  <div class="bg"></div>
-                  <div class="wrap">
-                    <div class="content">A propos de moi</div>
-                  </div>
-                </button>
-              </div>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-8 col-md-12">
-                    <div class="card">
-                        <div class="card-inner">
-                        <div class="mac-header">
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                        </div>
-                        <p class="card-description">
-                            Je suis Marcel, passionné de digital à Abidjan, avec plus de 3 ans d'expérience en campagnes créatives et développement web.
-                        </p>
-                        <span class="card-tag">Digital</span> <span class="card-tag">Créatif</span>
-                        <div class="code-editor">
-                            <pre><code>J'ai piloté les lancements des smartphones TECNO (CAMON, SPARK, PHANTOM, POP), en gérant contenu, direction artistique, stratégie social media (TikTok, Facebook, Instagram, YouTube) et création de pages web axées performance.</code></pre>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 mt-md-4 mt-lg-0 position-relative">
-                    <div class="m2-container">
-                        <div class="group cursor-pointer hover:skew-x-6 hover:-skew-y-6 hover:duration-500 duration-500 group-hover:duration-500 overflow-hidden relative rounded-2xl shadow-inner shadow-gray-50 flex flex-col justify-around items-center w-40 h-80 bg-neutral-900 text-gray-50">
-                            <div class="after:duration-500 before:duration-500 duration-500 group-hover:before:translate-x-11 group-hover:before:-translate-y-11 group-hover:after:translate-x-11 group-hover:after:translate-y-16 after:absolute after:w-12 after:h-12 after:bg-orange-400 after:rounded-full after:-z-10 after:blur-xl after:bottom-32 after:right-16 after:w-12 after:h-12 before:absolute before:w-20 before:h-20 before:bg-sky-400 before:rounded-full before:-z-10 before:blur-xl before:top-20 before:right-16 before:w-12 before:h-12 flex flex-col items-center justify-center font-extrabold z-10 text-center">
-                                <div id="clock" class="text-5xl mb-2">00:00</div>
-                                <div id="date" class="text-sm font-light">--/--/----</div>
-                            </div>
-                            <div class="flex flex-row justify-center text-sm font-thin items-center gap-1 font-thin">
-                                <span>Déverrouillez</span>
-                                <svg y="0" xmlns="http://www.w3.org/2000/svg" x="0" width="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" height="100" class="w-4 h-4 stroke-current">
-                                    <path stroke-width="8" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M33.9,46V29.9a16.1,16.1,0,0,1,32.2,0M50,62v8.1m-24.1,16H74.1a8,8,0,0,0,8-8V54a8,8,0,0,0-8-8H25.9a8,8,0,0,0-8,8V78.1A8,8,0,0,0,25.9,86.1Z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ce que je fais Section -->
-    <section class="services-glass-section py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <button class="title-button">
-                    <div class="bg"></div>
-                    <div class="wrap">
-                        <div class="content">Ce que je fais</div>
-                    </div>
-                </button>
-            </div>
-            <div class="services-glass-container">
-                <div data-text="Stratégie Digitale" style="--r:-15;" class="glass">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
-                        <path d="M448 256A192 192 0 1 0 64 256a192 192 0 1 0 384 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zM224 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
-                      </svg>                      
-                    <p>Je crée des campagnes impactantes  concept, direction créative, influence, lancement produit, suivi de performance.</p>
-                </div>
-                <div data-text="UI/UX & Contenu" style="--r:5;" class="glass">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"width="70" height="70">
-                        <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/>
-                    </svg>
-                    <p>Je conçois des interfaces modernes et supervise la production de visuels (vidéo, photo, animation) pour le digital.</p>
-                </div>
-                <div data-text="Développement Web" style="--r:25;" class="glass">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="70" height="70">
-                        <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
-                    </svg>
-                    <p>Je développe des sites rapides et responsives avec React, Next.js, Tailwind et Node.js.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chatbot Section -->
-    <!-- Projets Réalisés Section -->
-    <section class="projects-section py-5" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
-        <div class="container">
-            <div class="flex justify-center" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
-                <div class="[--background:#fff] [--color:#000] [--muted:#242424] [--muted-foreground:#9c9c9c] [--border:#2e2e2e] [--shadow:rgba(60,64,67,0.3)_0_1px_2px_0,rgba(60,64,67,0.15)_0_2px_6px_2px] w-4/5 h-auto rounded-2xl bg-white[box-shadow:var(--shadow)]">
-                    <div class="[--tl-color:#daa520] [--tl-rounded:9999px] [--tl-bullet-size:25px] [--tl-line-width:3px] [--offset:calc(var(--tl-bullet-size)/2+var(--tl-line-width)/2)] [&_[data-child=bullet]]:left-[calc((var(--tl-bullet-size)/2+var(--tl-line-width)/2)*-1)] [&_[data-child=bullet]]:right-auto [&_[data-child=body]]:pl-[var(--offset)] [&_[data-tl=item]]:before:[--timeline-line-left:calc(var(--tl-line-width)*-1)] [&_[data-tl=item]]:before:[var(--timeline-line-right:auto)] [&_[data-tl=item]]:pl-[var(--offset)] p-4 pl-8" data-align="left" role="group">
-                        <div class="[--item-border-color:#424242] [--tli-border-style:dotted] [--item-line:var(--tl-line-width)_var(--tli-border-style,solid)_var(--item-border-color)] [&_[data-child=bullet]]:data-[line-active]:border-[var(--tli-color,var(--tl-color))] group relative text-left text-zinc-600 dark:text-zinc-500 [&:where(:not(:last-of-type))]:[--timeline-line-display:block] [&:where(:not(:first-of-type))]:mt-8 pb-4 dark:[--item-border-color:#424242] before:absolute before:pointer-events-none before:top-0 before:left-[var(--timeline-line-left,0)] before:right-[var(--timeline-line-right,0)] before:-bottom-8 before:[display:var(--timeline-line-display,none)] before:[border-inline-start:var(--item-line)] [&:where([data-line-active])]:before:border-[var(--tli-color,var(--tl-color))]" data-line-active="true" data-tl="item">
-                            <div class="bg-[#fff] border-[var(--muted)] text-[var(--muted)] border-solid [border-width:var(--tli-line-width,var(--tl-line-width))] absolute top-0 h-[var(--tl-bullet-size)] w-[var(--tl-bullet-size)] rounded-[var(--tl-rounded)] flex items-center justify-center cursor-pointer" data-active="true" data-child="bullet">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M12 3l0 6"></path>
-                                    <path d="M12 15l0 6"></path>
-                                </svg>
-                            </div>
-                            <div class="" data-child="body">
-                                <span class="font-semibold leading-none font-mono text-sky-600">Freelance</span>
-                                <div class="mt-0" role="group">
-                                    <p class="flex flex-row flex-nowrap items-center gap-2 text-zinc-600 dark:text-zinc-500">
-                                        <span class="text-sm font-normal font-mono line-clamp-1">Abidjan</span>
-                                    </p>
-                                </div>
-                                <div class="text-sm font-normal font-mono [&_*]:font-mono mt-2 white-space-break-spaces flex-col items-start scrollbar markdown-body line-clamp-2">
-                                    Gestion de campagnes digitales pour TECNO Mobile Côte d'Ivoire. Direction créative, production de contenu, et stratégie de communication.
-                                </div>
-                                <div class="relative text-sm flex flex-row items-center gap-2 w-max [text-align:inherit] mt-2" role="group">
-                                    <time class="flex flex-row items-center gap-2 font-mono">2023</time>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="[--item-border-color:#424242] [--tli-border-style:solid] [--item-line:var(--tl-line-width)_var(--tli-border-style,solid)_var(--item-border-color)] [&_[data-child=bullet]]:data-[line-active]:border-[var(--tli-color,var(--tl-color))] group relative text-left text-zinc-600 dark:text-zinc-500 [&:where(:not(:last-of-type))]:[--timeline-line-display:block] [&:where(:not(:first-of-type))]:mt-8 pb-4 dark:[--item-border-color:#424242] before:absolute before:pointer-events-none before:top-0 before:left-[var(--timeline-line-left,0)] before:right-[var(--timeline-line-right,0)] before:-bottom-8 before:[display:var(--timeline-line-display,none)] before:[border-inline-start:var(--item-line)] [&:where([data-line-active])]:before:border-[var(--tli-color,var(--tl-color))]" data-tl="item">
-                            <div class="bg-[#fff] border-[var(--muted)] text-[var(--muted)] border-solid [border-width:var(--tli-line-width,var(--tl-line-width))] absolute top-0 h-[var(--tl-bullet-size)] w-[var(--tl-bullet-size)] rounded-[var(--tl-rounded)] flex items-center justify-center cursor-pointer" data-child="bullet">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor">
-                                    <path d="M7 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                                    <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                                    <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                                    <path d="M7 8l0 8"></path>
-                                    <path d="M9 18h6a2 2 0 0 0 2 -2v-5"></path>
-                                    <path d="M14 14l3 -3l3 3"></path>
-                                </svg>
-                            </div>
-                            <div class="" data-child="body">
-                                <span class="font-semibold leading-none font-mono text-sky-600">Freelance UI/UX & Développement Web</span>
-                                <div class="mt-0" role="group">
-                                    <p class="flex flex-row flex-nowrap items-center gap-2 text-zinc-600 dark:text-zinc-500">
-                                        <span class="text-sm font-normal font-mono line-clamp-1">Abidjan</span>
-                                    </p>
-                                </div>
-                                <div class="text-sm font-normal font-mono [&_*]:font-mono mt-2 white-space-break-spaces flex-col items-start scrollbar markdown-body line-clamp-2">
-                                    Conception et développement de sites web avec React, Next.js, Tailwind. Projets pour des PME, artistes, et startups tech.
-                                </div>
-                                <div class="relative text-sm flex flex-row items-center gap-2 w-max [text-align:inherit] mt-2" role="group">
-                                    <time class="flex flex-row items-center gap-2 font-mono">2020</time>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="[--item-border-color:#424242] [--tli-border-style:solid] [--item-line:var(--tl-line-width)_var(--tli-border-style,solid)_var(--item-border-color)] [&_[data-child=bullet]]:data-[line-active]:border-[var(--tli-color,var(--tl-color))] group relative text-left text-zinc-600 dark:text-zinc-500 [&:where(:not(:last-of-type))]:[--timeline-line-display:block] [&:where(:not(:first-of-type))]:mt-8 pb-4 dark:[--item-border-color:#424242] before:absolute before:pointer-events-none before:top-0 before:left-[var(--timeline-line-left,0)] before:right-[var(--timeline-line-right,0)] before:-bottom-8 before:[display:var(--timeline-line-display,none)] before:[border-inline-start:var(--item-line)] [&:where([data-line-active])]:before:border-[var(--tli-color,var(--tl-color))]" data-tl="item">
-                            <div class="bg-[#fff] border-[var(--muted)] text-[var(--muted)] border-solid [border-width:var(--tli-line-width,var(--tl-line-width))] absolute top-0 h-[var(--tl-bullet-size)] w-[var(--tl-bullet-size)] rounded-[var(--tl-rounded)] flex items-center justify-center cursor-pointer" data-child="bullet">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M12 3l0 6"></path>
-                                    <path d="M12 15l0 6"></path>
-                                </svg>
-                            </div>
-                            <div class="" data-child="body">
-                                <span class="font-semibold leading-none font-mono text-sky-600">Formation en Développement Web</span>
-                                <div class="mt-0" role="group">
-                                    <p class="flex flex-row flex-nowrap items-center gap-2 text-zinc-600 dark:text-zinc-500">
-                                        <span class="text-sm font-normal font-mono line-clamp-1">Abidjan</span>
-                                    </p>
-                                </div>
-                                <div class="text-sm font-normal font-mono [&_*]:font-mono mt-2 white-space-break-spaces flex-col items-start scrollbar markdown-body line-clamp-2">
-                                    Apprentissage des bases du développement front-end et UI/UX, introduction aux design systems et outils modernes (HTML, CSS, Figma).
-                                </div>
-                                <div class="relative text-sm flex flex-row items-center gap-2 w-max [text-align:inherit] mt-2" role="group">
-                                    <time class="flex flex-row items-center gap-2 font-mono">2020</time>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="[--item-border-color:#424242] [--tli-border-style:solid] [--item-line:var(--tl-line-width)_var(--tli-border-style,solid)_var(--item-border-color)] [&_[data-child=bullet]]:data-[line-active]:border-[var(--tli-color,var(--tl-color))] group relative text-left text-zinc-600 dark:text-zinc-500 [&:where(:not(:last-of-type))]:[--timeline-line-display:block] [&:where(:not(:first-of-type))]:mt-8 pb-4 dark:[--item-border-color:#424242] before:absolute before:pointer-events-none before:top-0 before:left-[var(--timeline-line-left,0)] before:right-[var(--timeline-line-right,0)] before:-bottom-8 before:[display:var(--timeline-line-display,none)] before:[border-inline-start:var(--item-line)] [&:where([data-line-active])]:before:border-[var(--tli-color,var(--tl-color))]" data-tl="item">
-                            <div class="bg-[#fff] border-[var(--muted)] text-[var(--muted)] border-solid [border-width:var(--tli-line-width,var(--tl-line-width))] absolute top-0 h-[var(--tl-bullet-size)] w-[var(--tl-bullet-size)] rounded-[var(--tl-rounded)] flex items-center justify-center cursor-pointer" data-child="bullet">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M12 3l0 6"></path>
-                                    <path d="M12 15l0 6"></path>
-                                </svg>
-                            </div>
-                            <div class="" data-child="body">
-                                <span class="font-semibold leading-none font-mono text-sky-600">Projets de formation – Développement Web</span>
-                                <div class="mt-0" role="group">
-                                    <p class="flex flex-row flex-nowrap items-center gap-2 text-zinc-600 dark:text-zinc-500">
-                                        <span class="text-sm font-normal font-mono line-clamp-1">Abidjan</span>
-                                    </p>
-                                </div>
-                                <div class="text-sm font-normal font-mono [&_*]:font-mono mt-2 white-space-break-spaces flex-col items-start scrollbar markdown-body line-clamp-2">
-                                    Réalisation de mini-projets pratiques : landing pages, dashboards simples, portfolio personnel. Mise en pratique avec Git, React et Tailwind.
-                                </div>
-                                <div class="relative text-sm flex flex-row items-center gap-2 w-max [text-align:inherit] mt-2" role="group">
-                                    <time class="flex flex-row items-center gap-2 font-mono">2020</time>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section with Truck Animation -->
-    <section id="projects" class="projects-truck-section py-5" aria-label="Projets" style="transform: translateZ(0); -webkit-transform: translateZ(0); will-change: transform;">
-        <div class="container" style="transform: translateZ(0); -webkit-transform: translateZ(0);">
-            <div class="text-center mb-5">
-                <button class="title-button">
-                    <div class="bg"></div>
-                    <div class="wrap">
-                        <div class="content">Mes Projets</div>
-                    </div>
-                </button>
-            </div>
-            <p class="notice-text">Cliquez sur le bouton vert pour découvrir les détails de chaque projet</p>
-
-                <aside class="menu-tooltip">
-                    <input type="checkbox" id="toggle" />
-                    <label for="toggle" class="toggle">➕</label>
-                    <li style="--i: 0" class="circle-box">
-                        <a href="#" class="anchor">👾</a>
-                    </li>
-                    <li style="--i: 1" class="circle-box">
-                        <a href="#" class="anchor">🤖</a>
-                    </li>
-                    <li style="--i: 2" class="circle-box">
-                        <a href="#" class="anchor">🪼</a>
-                    </li>
-                    <li style="--i: 3" class="circle-box">
-                        <a href="#" class="anchor"></a>
-                    </li>
-                    <li style="--i: 4" class="circle-box">
-                        <a href="#" class="anchor"></a>
-                    </li>
-                    <li style="--i: 5" class="circle-box">
-                        <a href="#" class="anchor"></a>
-                    </li>
-                    <li style="--i: 6" class="circle-box">
-                        <a href="#" class="anchor"></a>
-                    </li>
-                    <li style="--i: 7" class="circle-box">
-                        <a href="#" class="anchor"></a>
-                    </li>
-                </aside>
-
-                <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <div class="vscode-card" data-project="portfolio">
-                    <div class="window-bar">
-                        <div class="window-buttons">
-                            <span class="btn close"></span>
-                            <span class="btn minimize"></span>
-                            <span class="btn maximize"></span>
-                        </div>
-                        <div class="window-title">portfolio.html-VS Code👾</div>
-                    </div>
-                    <div class="tab-bar">
-                        <div class="tab active">portfolio.html</div>
-                        <div class="tab">styles.css</div>
-                    </div>
-                    <div class="editor-container">
-                        <div class="sidebar">
-                            <div class="icon"></div>
-                        </div>
-                        <div class="editor">
-                            <div class="line-numbers">
-                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
-                            </div>
-                            <div class="code-content">
-                                <pre><code>Portfolio Personnel
-• Site web portfolio moderne
-• Animations fluides
-• UX optimisée
-• Tech: HTML, CSS, JS, Tailwind</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-bar">
-                        <span class="status-item">HTML</span>
-                        <span class="status-item">UTF-8</span>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="vscode-card" data-project="tecno">
-                    <div class="window-bar">
-                        <div class="window-buttons">
-                            <span class="btn close"></span>
-                            <span class="btn minimize"></span>
-                            <span class="btn maximize"></span>
-                        </div>
-                        <div class="window-title">tecno.md-VS Code 🤖</div>
-                    </div>
-                    <div class="tab-bar">
-                        <div class="tab active">tecno.md</div>
-                        <div class="tab">assets</div>
-                    </div>
-                    <div class="editor-container">
-                        <div class="sidebar">
-                            <div class="icon"></div>
-                        </div>
-                        <div class="editor">
-                            <div class="line-numbers">
-                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
-                            </div>
-                            <div class="code-content">
-                                <pre><code>TECNO Mobile CI
-• Campagnes digitales
-• Création de contenu
-• Marketing digital
-• Social media strategy</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-bar">
-                        <span class="status-item">Markdown</span>
-                        <span class="status-item">UTF-8</span>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="vscode-card" data-project="freelance">
-                    <div class="window-bar">
-                        <div class="window-buttons">
-                            <span class="btn close"></span>
-                            <span class="btn minimize"></span>
-                            <span class="btn maximize"></span>
-                        </div>
-                        <div class="window-title">freelance.jsx-VS Code 🪼</div>
-                    </div>
-                    <div class="tab-bar">
-                        <div class="tab active">freelance.jsx</div>
-                        <div class="tab">components</div>
-                    </div>
-                    <div class="editor-container">
-                        <div class="sidebar">
-                            <div class="icon"></div>
-                        </div>
-                        <div class="editor">
-                            <div class="line-numbers">
-                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
-                            </div>
-                            <div class="code-content">
-                                <pre><code>Projets Web Freelance
-• Sites web modernes
-• PME et startups
-• React & Next.js
-• TailwindCSS</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="status-bar">
-                        <span class="status-item">JSX</span>
-                        <span class="status-item">UTF-8</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="truck-container d-flex justify-content-center align-items-center">
-                <div class="truck">
-                    <div class="truck__body">
-                        <div class="truck__body truck__body--top">
-                            <div class="truck__window">
-                                <div class="truck__window-glass"></div>
-                            </div>
-                        </div>
-                        <div class="truck__body truck__body--mid">
-                            <div class="truck__mid-body"></div>
-                        </div>
-                        <div class="truck__body truck__body--bottom">
-                            <div class="truck__underpanel"></div>
-                            <div class="truck__rear-bumper"></div>
-                            <div class="truck__side-skirt"></div>
-                        </div>
-                    </div>
-                    <div class="truck__wheel truck__wheel--front">
-                        <div class="truck__wheel-arch"></div>
-                        <div class="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
-                        <div class="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
-                        <div class="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
-                        <div class="truck-wheel">
-                            <div class="truck-wheel__rim">
-                                <div style="--index: 0;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 1;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 2;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 3;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 4;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 5;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 6;" class="truck-wheel__spoke"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="truck__wheel truck__wheel--rear">
-                        <div class="truck__wheel-arch"></div>
-                        <div class="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
-                        <div class="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
-                        <div class="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
-                        <div class="truck-wheel">
-                            <div class="truck-wheel__rim">
-                                <div style="--index: 0;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 1;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 2;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 3;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 4;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 5;" class="truck-wheel__spoke"></div>
-                                <div style="--index: 6;" class="truck-wheel__spoke"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="truck__headlight"></div>
-                    <div class="truck__taillight"></div>
-                    <div class="truck__indicator"></div>
-                    <div class="truck__foglight"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Modal Overlay -->
-    <div id="modal-overlay" class="modal-overlay">
-        <!-- Portfolio Modal -->
-        <div id="modal-portfolio" class="vscode-modal" style="display: none;">
-            <div class="modal-window-bar">
-                <div class="window-buttons">
-                    <span class="btn close"></span>
-                    <span class="btn minimize"></span>
-                    <span class="btn maximize"></span>
-                </div>
-                <div class="window-title">portfolio.html - Détails du Projet 👾</div>
-            </div>
-            <div class="modal-content">
-                <h2>Portfolio Personnel</h2>
-                <div class="project-details">
-                    <p>Un site web portfolio moderne et interactif conçu pour présenter mes compétences et réalisations de manière élégante et professionnelle.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">TailwindCSS</span>
-                    </div>
-                </div>
-                <div class="project-gallery">
-                    <img src="./images/portfolio/preview-1.jpg" loading="lazy" alt="Portfolio Preview 1">
-                    <img src="./images/portfolio/preview-2.jpg" loading="lazy" alt="Portfolio Preview 2">
-                    <img src="./images/portfolio/preview-3.jpg" loading="lazy" alt="Portfolio Preview 3">
-                </div>
-                <div class="project-links">
-                    <button class="download-button">
-                        <div class="dots_border"></div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
-                            <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                        <span class="text_button">Voir le Site 👾</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- TECNO Modal -->
-        <div id="modal-tecno" class="vscode-modal" style="display: none;">
-            <div class="modal-window-bar">
-                <div class="window-buttons">
-                    <span class="btn close"></span>
-                    <span class="btn minimize"></span>
-                    <span class="btn maximize"></span>
-                </div>
-                <div class="window-title">tecno.md - Détails du Projet 🤖</div>
-            </div>
-            <div class="modal-content">
-                <h2>TECNO Mobile CI</h2>
-                <div class="project-details">
-                    <p>Gestion des campagnes digitales et création de contenu pour la marque TECNO Mobile en Côte d'Ivoire, mettant en valeur les produits et renforçant la présence de la marque.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Design</span>
-                        <span class="tech-tag">Marketing Digital</span>
-                        <span class="tech-tag">Social Media</span>
-                        <span class="tech-tag">Content Creation</span>
-                    </div>
-                </div>
-                <div class="project-gallery">
-                    <img src="./images/tecno/campaign-1.jpg" loading="lazy" alt="TECNO Campaign 1">
-                    <img src="./images/tecno/campaign-2.jpg" loading="lazy" alt="TECNO Campaign 2">
-                    <img src="./images/tecno/social-1.jpg" loading="lazy" alt="Social Media Content">
-                </div>
-                <div class="project-links">
-                    <button class="download-button">
-                        <div class="dots_border"></div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
-                            <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                        <span class="text_button">Voir les Campagnes 🤖</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Freelance Modal -->
-        <div id="modal-freelance" class="vscode-modal" style="display: none;">
-            <div class="modal-window-bar">
-                <div class="window-buttons">
-                    <span class="btn close"></span>
-                    <span class="btn minimize"></span>
-                    <span class="btn maximize"></span>
-                </div>
-                <div class="window-title">freelance.jsx - Détails du Projet 🪼</div>
-            </div>
-            <div class="modal-content">
-                <h2>Projets Web Freelance</h2>
-                <div class="project-details">
-                    <p>Développement de sites web modernes et performants pour PME et startups, utilisant les dernières technologies pour créer des expériences utilisateur exceptionnelles.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">TailwindCSS</span>
-                        <span class="tech-tag">Node.js</span>
-                    </div>
-                </div>
-                <div class="project-gallery">
-                    <img src="./images/freelance/project-1.jpg" loading="lazy" alt="Freelance Project 1">
-                    <img src="./images/freelance/project-2.jpg" loading="lazy" alt="Freelance Project 2">
-                    <img src="./images/freelance/project-3.jpg" loading="lazy" alt="Freelance Project 3">
-                </div>
-                <div class="project-links">
-                    <button class="download-button">
-                        <div class="dots_border"></div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
-                            <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                        <span class="text_button">Portfolio Complet 🪼</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5" aria-label="Contact">
-        <div class="container">
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <button class="title-button">
-                  <div class="bg"></div>
-                  <div class="wrap">
-                    <div class="content">Me Contacter</div>
-                  </div>
-                </button>
-              </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="contact-text">
-                        <h3>Travaillons ensemble sur votre prochain projet</h3>
-                        <p>Je suis toujours à la recherche de nouvelles opportunités passionnantes. Que vous ayez une idée de projet ou que vous souhaitiez simplement discuter, n'hésitez pas à me contacter.</p>
-                        <p>Je suis spécialisé dans :</p>
-                        <ul>
-                            <li>Développement Web Full Stack</li>
-                            <li>Design UI/UX</li>
-                            <li>Applications Mobiles</li>
-                            <li>Solutions E-commerce</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <form class="contact-form">
-                        <div class="input-wrapper">
-                            <div class="glow"></div>
-                            <div class="darkBorderBg"></div>
-                            <div class="white"></div>
-                            <div class="border"></div>
-                            <input type="text" id="name" class="contact-input" placeholder="Votre nom" required>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="glow"></div>
-                            <div class="darkBorderBg"></div>
-                            <div class="white"></div>
-                            <div class="border"></div>
-                            <input type="email" id="email" class="contact-input" placeholder="Votre email" required>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="glow"></div>
-                            <div class="darkBorderBg"></div>
-                            <textarea id="message" class="contact-input contact-textarea" placeholder="Votre message" required></textarea>
-                        </div>
-                        <div class="submit-wrapper">
-                            <a href="https://wa.me/2250172480623?text=Bonjour%20Marcel%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20avec%20vous." target="_blank" class="download-button">
-                                <div class="dots_border"></div>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle mr-0">
-                                    <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM224 438.7c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
-                                </svg>
-                                <span class="text_button">Me contacter sur WhatsApp</span>
-                            </a>
-                    </form>
-
+    <div class="loader-container">
+        <img src="images/marcelsansfond2.png" alt="Marcel Assogba" class="profile-img">
+        <h1 class="welcome-title">Bienvenue dans mon Portfolio</h1>
+        <p class="subtitle">
+            Développeur Web Full-Stack & Spécialiste Marketing Digital. 
+            Je transforme vos idées en solutions digitales performantes.
+        </p>
+        
+        <button class="enter-btn" onclick="enterSite()">
+            <div class="bg"></div>
+            <div class="wrap">
+                <div class="content">
+                    Découvrir mon travail
+                    <i class="fas fa-door-open"></i>
                 </div>
             </div>
+        </button>
+        
+        <div class="social-links">
+            <a href="https://github.com/Spartacusklaus45" class="social-link" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 496 512">
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 389.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.6.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/marcel-assogba-080b72171/" class="social-link" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/+2250172480623" class="social-link" aria-label="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                </svg>
+            </a>
         </div>
-    </section>
+    </div>
+    
+    <div class="footer">
+        © 2025 Marcel Assogba. Tous droits réservés.
+    </div>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Mobile optimizations -->
     <script>
-        // Inline critical JS
-        document.documentElement.style.visibility = 'hidden';
-        window.addEventListener('DOMContentLoaded', function() {
-            document.documentElement.style.visibility = '';
-            // Check for mobile
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            // Set mobile optimizations
-            if (isMobile) {
-                document.documentElement.classList.add('mobile');
-                // Load mobile-optimized JS
-                const mobileScript = document.createElement('script');
-                mobileScript.src = 'js/mobile-optimizations.js';
-                document.head.appendChild(mobileScript);
-            }
-        });
-    </script>
-
-    <!-- Optimized script loading -->
-    <script>
-        // Performance monitoring
-        const perfMonitor = {
-            marks: new Map(),
-            measure: function(name, startMark, endMark) {
-                if (window.performance && window.performance.measure) {
-                    try {
-                        window.performance.measure(name, startMark, endMark);
-                    } catch (e) {}
-                }
-            },
-            mark: function(name) {
-                if (window.performance && window.performance.mark) {
-                    window.performance.mark(name);
-                    this.marks.set(name, performance.now());
-                }
-            }
-        };
-
-        // Optimized script loading
-        function loadScript(src, { async = true, defer = true, priority = 'auto' } = {}) {
-            const script = document.createElement('script');
-            script.src = src;
-            script.async = async;
-            script.defer = defer;
-            document.head.appendChild(script);
-            return script;
+        function enterSite() {
+            // Add fade out animation
+            document.body.classList.add('fade-out');
+            
+            // Navigate to main site after animation
+            setTimeout(() => {
+                window.location.href = 'main.html';
+            }, 800);
         }
 
-        // Optimized script loading with performance monitoring
-        window.addEventListener('load', function() {
-            perfMonitor.mark('scriptLoadStart');
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            // Load mobile optimizations first on mobile
-            if (isMobile) {
-                loadScript('./js/mobile-optimizations.js', { priority: 'high', async: false });
-            }
+        // Preload main site resources for faster transition
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = 'main.html';
+        document.head.appendChild(link);
 
-            const scripts = [
-                { src: 'js/terminal.js', priority: 'high' },
-                { src: 'js/typing.js', priority: 'high' },
-                { src: 'js/scroll.js', priority: 'high' },
-                { src: 'js/laptop.js', priority: isMobile ? 'low' : 'high' },
-                { src: 'js/mac-window.js', priority: 'medium' },
-                { src: 'js/vscode-modal.js', priority: 'medium' },
-                { src: 'js/code-typing.js', priority: 'medium' },
-                { src: 'js/contact-form.js', priority: 'low' },
-                { src: 'js/analytics.js', priority: 'low' }
-            ];
-
-            // Load scripts with performance monitoring
-            perfMonitor.mark('highPriorityStart');
-            const highPriority = scripts.filter(s => s.priority === 'high');
-            Promise.all(highPriority.map(s => loadScript(s.src, { priority: 'high' })))
-                .then(() => {
-                    perfMonitor.mark('highPriorityEnd');
-                    perfMonitor.measure('highPriorityLoad', 'highPriorityStart', 'highPriorityEnd');
-                });
-
-            // Load medium priority scripts after a delay
-            setTimeout(() => {
-                const mediumPriority = scripts.filter(s => s.priority === 'medium');
-                mediumPriority.forEach(s => loadScript(s.src));
-            }, 1000);
-
-            // Load low priority scripts last
-            setTimeout(() => {
-                const lowPriority = scripts.filter(s => s.priority === 'low');
-                lowPriority.forEach(s => loadScript(s.src));
-            }, 2000);
-        });
+        // Optional: Auto-enter after 5 seconds (uncomment if desired)
+        // setTimeout(enterSite, 5000);
     </script>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-social">
-                    <a href="#" class="footer-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="footer-social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="footer-social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="footer-social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" class="footer-social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="footer-text">
-                    &copy; 2025 Marcel Assogba. Tous droits réservés.
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="js/code-typing.js"></script>
-    <script>
-        // Gestion du fond de la navbar lors du défilement
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            }
-        });
-    </script>
-    <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('mainNav');
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            // Add background when scrolling down
-            if (currentScroll > 50) {
-                navbar.classList.add('bg-neutral-900/70', 'backdrop-blur-md');
-            } else {
-                navbar.classList.remove('bg-neutral-900/70', 'backdrop-blur-md');
-            }
-
-            lastScroll = currentScroll;
-        });
-
-        // Clock update function
-        function updateClock() {
-            const now = new Date();
-            
-            // Update time
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}`;
-            
-            // Update date
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const year = now.getFullYear();
-            document.getElementById('date').textContent = `${day}/${month}/${year}`;
-        }
-
-        // Update clock immediately and then every second
-        updateClock();
-        setInterval(updateClock, 1000);
-
-        // Mobile menu toggle
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('animate-fade-in-down');
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('animate-fade-in-down');
-                }
-            });
-        });
-    </script>
-    <script src="js/vscode-modal.js"></script>
-    <script src="js/contact-form.js"></script>
-    <!-- Removed unused script.js -->
-    <script src="js/scroll.js"></script>
 </body>
 </html>
