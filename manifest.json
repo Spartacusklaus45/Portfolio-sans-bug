@@ -1,47 +1,25 @@
 {
-  "name": "Marcel Assogba - Portfolio",
-  "short_name": "MA Portfolio",
-  "description": "Portfolio professionnel de Marcel Assogba - Développeur Web & Digital Marketer",
+  "name": "Marcel Assogba — Regional Digital Manager & Créatif IA",
+  "short_name": "Marcel Assogba",
+  "description": "Portfolio de Marcel Assogba — Regional Digital Manager à Abidjan : ads créatives IA, e-commerce Shopify, data et développement web. Xiaomi & TECNO.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#191a1a",
-  "theme_color": "#191a1a",
+  "background_color": "#F7F3EC",
+  "theme_color": "#F7F3EC",
   "orientation": "any",
   "icons": [
-    {
-      "src": "images/marcelassogba blanc.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "images/marcelassogba blanc.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    { "src": "images/marcelassogba 2.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "images/marcelassogba 2.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/favicon.png", "sizes": "any", "type": "image/png" }
   ],
-  "categories": ["portfolio", "web development", "digital marketing"],
+  "categories": ["portfolio", "marketing", "business", "web development"],
   "lang": "fr",
   "dir": "ltr",
-  "prefer_related_applications": false,
-  "related_applications": [],
   "scope": "/",
   "shortcuts": [
-    {
-      "name": "À propos",
-      "url": "/#mac-window-section",
-      "description": "En savoir plus sur Marcel Assogba"
-    },
-    {
-      "name": "Portfolio",
-      "url": "/#projects",
-      "description": "Voir mes projets"
-    },
-    {
-      "name": "Contact",
-      "url": "/#contact",
-      "description": "Me contacter"
-    }
+    { "name": "Mon travail", "url": "/mon-travail", "description": "Projets, ads IA et résultats" },
+    { "name": "Projets", "url": "/mon-travail#projets", "description": "Voir mes projets" },
+    { "name": "Ads créatives IA", "url": "/mon-travail#ads", "description": "Spots & reels produits par IA" },
+    { "name": "Contact", "url": "/mon-travail#contact", "description": "Me contacter" }
   ]
 }

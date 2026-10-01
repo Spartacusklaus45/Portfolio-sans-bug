@@ -1,9 +1,12 @@
 User-agent: *
 Allow: /
-Sitemap: https://marcelassogba.vercel.app/sitemap.xml
 
-# Allow all bots to access everything
+# Moteurs & bots IA explicitement autorisés
 User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-Video
 Allow: /
 User-agent: Bingbot
 Allow: /
@@ -11,8 +14,15 @@ User-agent: DuckDuckBot
 Allow: /
 User-agent: GPTBot
 Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
 User-agent: Baiduspider
 Allow: /
 
-# Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+Sitemap: https://www.marcelassogba.com/sitemap.xml

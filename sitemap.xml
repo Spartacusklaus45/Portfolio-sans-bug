@@ -1,15 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://marcelassogba.vercel.app/</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://www.marcelassogba.com/</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.marcelassogba.com/images/marcel-portrait.jpg</image:loc>
+      <image:title>Marcel Assogba — Regional Digital Manager</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://marcelassogba.vercel.app/mon-travail</loc>
-    <lastmod>2025-08-23</lastmod>
+    <loc>https://www.marcelassogba.com/mon-travail</loc>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image><image:loc>https://www.marcelassogba.com/images/marcel-portrait.jpg</image:loc><image:title>Marcel Assogba, Regional Digital Manager à Abidjan</image:title></image:image>
+    <image:image><image:loc>https://www.marcelassogba.com/images/covers/mimarket-1.jpg</image:loc><image:title>mimarket.ci — boutique e-commerce MI Market</image:title></image:image>
+    <image:image><image:loc>https://www.marcelassogba.com/images/camon%2040.jpg</image:loc><image:title>TECNO CAMON 40 — campagne lancement</image:title></image:image>
+    <image:image><image:loc>https://www.marcelassogba.com/images/xiaomi-17t.jpg</image:loc><image:title>Xiaomi — digital régional Afrique</image:title></image:image>
+    <image:image><image:loc>https://www.marcelassogba.com/images/resultat-1.jpg</image:loc><image:title>Résultats e-commerce — 7,1M FCFA de ventes</image:title></image:image>
+    <image:image><image:loc>https://www.marcelassogba.com/images/resultat-2.jpg</image:loc><image:title>Campagne Meta Ads — 821 achats à 1,72$</image:title></image:image>
+    <image:image><image:loc>https://www.marcelassogba.com/images/resultat-3.jpg</image:loc><image:title>Campagnes Meta Ads — 2,1M impressions</image:title></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/tvc.jpg</video:thumbnail_loc>
+      <video:title>TVC — Spot officiel (IA générative)</video:title>
+      <video:description>Spot télévisuel produit par Marcel Assogba avec l'IA générative vidéo.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/tvc.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/effaceur-ia.jpg</video:thumbnail_loc>
+      <video:title>Effaceur IA — reel produit</video:title>
+      <video:description>Reel produit avec VFX assistés par IA — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/effaceur-ia.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/ecriture-ia.jpg</video:thumbnail_loc>
+      <video:title>Écriture IA — reel produit</video:title>
+      <video:description>Reel produit motion &amp; IA générative — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/ecriture-ia.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/note17-piscine.jpg</video:thumbnail_loc>
+      <video:title>Note 17 · Piscine — reel produit</video:title>
+      <video:description>Reel produit résistance à l'eau — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/note17-piscine.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/charge-inversee.jpg</video:thumbnail_loc>
+      <video:title>Charge inversée — reel produit</video:title>
+      <video:description>Reel produit mettant en avant la charge inversée — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/charge-inversee.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/resistance.jpg</video:thumbnail_loc>
+      <video:title>Résistance — reel produit</video:title>
+      <video:description>Reel produit durabilité — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/resistance.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/cuisine.jpg</video:thumbnail_loc>
+      <video:title>Cuisine — reel lifestyle</video:title>
+      <video:description>Reel lifestyle produit — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/cuisine.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/test-3-jours.jpg</video:thumbnail_loc>
+      <video:title>Test 3 jours — reel produit</video:title>
+      <video:description>Reel test produit sur 3 jours — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/test-3-jours.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/unboxing.jpg</video:thumbnail_loc>
+      <video:title>Unboxing — reel découverte</video:title>
+      <video:description>Reel unboxing produit — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/unboxing.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/teaser-2.jpg</video:thumbnail_loc>
+      <video:title>Teaser 02 — reel produit</video:title>
+      <video:description>Teaser produit — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/teaser-2.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/teaser-4.jpg</video:thumbnail_loc>
+      <video:title>Teaser 04 — reel produit</video:title>
+      <video:description>Teaser produit — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/teaser-4.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.marcelassogba.com/images/covers/note17-piscine.jpg</video:thumbnail_loc>
+      <video:title>Colors — reel colorimétrie</video:title>
+      <video:description>Reel colorimétrie produit — Marcel Assogba.</video:description>
+      <video:content_loc>https://www.marcelassogba.com/videos/colors.mp4</video:content_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
 </urlset>
