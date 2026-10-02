@@ -501,6 +501,26 @@ section{position:relative}
 .play-btn{box-shadow:inset 0 1px 0 rgba(255,255,255,.45), 0 12px 28px rgba(0,0,0,.45)}
 .cta{box-shadow:inset 0 1px 0 rgba(255,255,255,.22), 0 12px 30px rgba(20,17,16,.3)!important}
 
+/* ===== Section Blog (aperçu) ===== */
+.blog-sec{padding:70px 0;border-top:1px solid var(--line)}
+.blog-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.blog-head p{color:var(--muted);max-width:40ch;font-size:.95rem;margin-top:.5rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.art-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  text-decoration:none;color:inherit;transition:transform .35s var(--ease),box-shadow .35s}
+.art-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(28,24,19,.14)}
+.art-card .thumb{aspect-ratio:16/10;display:flex;align-items:flex-end;padding:1rem;background:linear-gradient(130deg,#241a10,#FF5A1F 130%)}
+.art-card .thumb span{font-family:var(--head);color:#fff;font-weight:500;font-size:1.05rem;line-height:1.15;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.art-card.b2 .thumb{background:linear-gradient(130deg,#101a30,#2f6bff 130%)}
+.art-card.b3 .thumb{background:linear-gradient(130deg,#132a1a,#12b33f 130%)}
+.art-card.b4 .thumb{background:linear-gradient(130deg,#2a1230,#a23dff 130%)}
+.art-card.b5 .thumb{background:linear-gradient(130deg,#301a10,#ff9a1f 130%)}
+.art-card.b6 .thumb{background:linear-gradient(130deg,#0f2226,#12c2c2 130%)}
+.art-card .bd{padding:1.1rem 1.2rem 1.3rem}
+.art-card .cat{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.art-card h3{font-family:var(--head);font-weight:500;font-size:1.08rem;margin:.4rem 0 .5rem;letter-spacing:-.01em}
+.art-card p{font-size:.88rem;color:var(--muted);line-height:1.5}
+
 /* ===== RESPONSIVE (tous écrans) ===== */
 @media(max-width:1100px){
   .reels{grid-template-columns:repeat(3,1fr)}
@@ -523,7 +543,7 @@ section{position:relative}
   .rotator{padding:60px 0}
 }
 @media(max-width:720px){
-  .grid2,.steps,.plans,.exp-grid,.testi-grid,.results-grid{grid-template-columns:1fr}
+  .grid2,.steps,.plans,.exp-grid,.testi-grid,.results-grid,.blog-grid{grid-template-columns:1fr}
   .reels{grid-template-columns:repeat(2,1fr);gap:14px}
   .ads,.block-dark,.footer{margin:8px;padding:50px 0}
   .block-dark .foot-note,.testi-head{flex-direction:column;align-items:flex-start}
@@ -965,6 +985,24 @@ section{position:relative}
         <div class="testi-card reveal"><div class="q">"</div><p>Marcel comprend à la fois le marketing et la technique. Nos campagnes ont gagné en performance et en clarté. Un vrai partenaire de croissance.</p><div class="who"><span>A</span><div><b>Partenaire marque</b><small>Lancement produit</small></div></div></div>
         <div class="testi-card reveal" data-d="1"><div class="q">"</div><p>Sérieux, créatif et pointu sur la data. Il a structuré notre présence digitale et fait décoller nos ventes en ligne.</p><div class="who"><span>K</span><div><b>Fondateur e-commerce</b><small>Boutique en ligne</small></div></div></div>
         <div class="testi-card reveal" data-d="2"><div class="q">"</div><p>Collaboration très professionnelle. Bon dev, bon créatif, bon stratège — le combo est rare. Livraisons rapides et soignées.</p><div class="who"><span>M</span><div><b>Responsable agence</b><small>Projet web</small></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog-sec" id="blog">
+    <div class="wrap">
+      <div class="blog-head">
+        <div>
+          <h2 class="h-lg reveal"><span class="dim">Le blog</span> · Côte d'Ivoire</h2>
+          <p class="reveal" data-d="1">Des guides concrets pour faire grandir votre marque : publicité, e-commerce, vidéo IA et développement web.</p>
+        </div>
+        <a href="/blog" class="btn btn-light reveal" data-d="1">Voir tous les articles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="blog-grid">
+        <a class="art-card reveal" href="/marketing-digital-cote-divoire"><div class="thumb"><span>Marketing digital en Côte d'Ivoire : le guide complet</span></div><div class="bd"><div class="cat">Guide pilier</div><h3>Marketing digital en Côte d'Ivoire</h3><p>La stratégie complète pour trouver des clients en ligne en 2026.</p></div></a>
+        <a class="art-card b2 reveal" href="/publicite-facebook-instagram-cote-divoire"><div class="thumb"><span>Publicité Facebook &amp; Instagram en Côte d'Ivoire</span></div><div class="bd"><div class="cat">Meta Ads</div><h3>Pub Facebook &amp; Instagram</h3><p>Ciblage, budget FCFA, paiement et créatives qui convertissent.</p></div></a>
+        <a class="art-card b5 reveal" href="/prix-publicite-en-ligne-cote-divoire"><div class="thumb"><span>Combien coûte la publicité en ligne en Côte d'Ivoire ?</span></div><div class="bd"><div class="cat">Tarifs</div><h3>Prix de la pub en ligne</h3><p>Budget média, honoraires freelance vs agence et calcul du ROI.</p></div></a>
       </div>
     </div>
   </section>
