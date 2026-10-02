@@ -516,6 +516,11 @@ section{position:relative}
 .art-card.b4 .thumb{background:linear-gradient(130deg,#2a1230,#a23dff 130%)}
 .art-card.b5 .thumb{background:linear-gradient(130deg,#301a10,#ff9a1f 130%)}
 .art-card.b6 .thumb{background:linear-gradient(130deg,#0f2226,#12c2c2 130%)}
+.art-card .thumb{position:relative;overflow:hidden}
+.art-card .thumb img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .5s var(--ease)}
+.art-card .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(0,0,0,.62));z-index:1}
+.art-card .thumb span{position:relative;z-index:2}
+.art-card:hover .thumb img.ph{transform:scale(1.05)}
 .art-card .bd{padding:1.1rem 1.2rem 1.3rem}
 .art-card .cat{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .art-card h3{font-family:var(--head);font-weight:500;font-size:1.08rem;margin:.4rem 0 .5rem;letter-spacing:-.01em}
@@ -1000,9 +1005,9 @@ section{position:relative}
         <a href="/blog" class="btn btn-light reveal" data-d="1">Voir tous les articles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
       </div>
       <div class="blog-grid">
-        <a class="art-card reveal" href="/marketing-digital-cote-divoire"><div class="thumb"><span>Marketing digital en Côte d'Ivoire : le guide complet</span></div><div class="bd"><div class="cat">Guide pilier</div><h3>Marketing digital en Côte d'Ivoire</h3><p>La stratégie complète pour trouver des clients en ligne en 2026.</p></div></a>
-        <a class="art-card b2 reveal" href="/publicite-facebook-instagram-cote-divoire"><div class="thumb"><span>Publicité Facebook &amp; Instagram en Côte d'Ivoire</span></div><div class="bd"><div class="cat">Meta Ads</div><h3>Pub Facebook &amp; Instagram</h3><p>Ciblage, budget FCFA, paiement et créatives qui convertissent.</p></div></a>
-        <a class="art-card b5 reveal" href="/prix-publicite-en-ligne-cote-divoire"><div class="thumb"><span>Combien coûte la publicité en ligne en Côte d'Ivoire ?</span></div><div class="bd"><div class="cat">Tarifs</div><h3>Prix de la pub en ligne</h3><p>Budget média, honoraires freelance vs agence et calcul du ROI.</p></div></a>
+        <a class="art-card reveal" href="/marketing-digital-cote-divoire"><div class="thumb"><img class="ph" src="images/marcel-portrait.jpg" alt="Marcel Assogba, Regional Digital Manager à Abidjan" loading="lazy"><span>Marketing digital en Côte d'Ivoire : le guide complet</span></div><div class="bd"><div class="cat">Guide pilier</div><h3>Marketing digital en Côte d'Ivoire</h3><p>La stratégie complète pour trouver des clients en ligne en 2026.</p></div></a>
+        <a class="art-card b2 reveal" href="/publicite-facebook-instagram-cote-divoire"><div class="thumb"><img class="ph" src="images/resultat-3.jpg" alt="Résultats de campagnes Meta Ads" loading="lazy"><span>Publicité Facebook &amp; Instagram en Côte d'Ivoire</span></div><div class="bd"><div class="cat">Meta Ads</div><h3>Pub Facebook &amp; Instagram</h3><p>Ciblage, budget FCFA, paiement et créatives qui convertissent.</p></div></a>
+        <a class="art-card b5 reveal" href="/prix-publicite-en-ligne-cote-divoire"><div class="thumb"><img class="ph" src="images/resultat-1.jpg" alt="Tableau de résultats e-commerce" loading="lazy"><span>Combien coûte la publicité en ligne en Côte d'Ivoire ?</span></div><div class="bd"><div class="cat">Tarifs</div><h3>Prix de la pub en ligne</h3><p>Budget média, honoraires freelance vs agence et calcul du ROI.</p></div></a>
       </div>
     </div>
   </section>

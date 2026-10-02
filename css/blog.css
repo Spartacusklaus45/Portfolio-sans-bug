@@ -117,6 +117,12 @@ h1,h2,h3,h4{font-family:var(--head);font-weight:500;letter-spacing:-.02em;line-h
 .card.g4 .thumb{background:linear-gradient(130deg,#2a1230,#a23dff 130%)}
 .card.g5 .thumb{background:linear-gradient(130deg,#301a10,#ff9a1f 130%)}
 .card.g6 .thumb{background:linear-gradient(130deg,#0f2226,#12c2c2 130%)}
+.card .thumb{position:relative;overflow:hidden}
+.card .thumb img.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.card .thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(0,0,0,.62));z-index:1}
+.card .thumb span{position:relative;z-index:2}
+.card:hover .thumb img.ph{transform:scale(1.05)}
+.card .thumb img.ph{transition:transform .5s var(--ease)}
 .card .body{padding:1.1rem 1.2rem 1.3rem}
 .card .cat{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .card h3{font-size:1.08rem;margin:.4rem 0 .5rem}
