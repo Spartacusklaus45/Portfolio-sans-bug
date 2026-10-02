@@ -132,6 +132,8 @@ const burger=document.getElementById('burger'),navlinks=document.getElementById(
 burger.addEventListener('click',()=>navlinks.classList.toggle('on'));
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=Math.min(i%3*80,240)+'ms';io.observe(el);});
+/* filet de sécurité : tout afficher si le JS/observer tarde */
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(e){e.classList.add('in');});},1400);
 </script>
 </body>
 </html>
