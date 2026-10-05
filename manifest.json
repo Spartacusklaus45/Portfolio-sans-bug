@@ -4,8 +4,8 @@
   "description": "Portfolio de Marcel Assogba — Regional Digital Manager à Abidjan : ads créatives IA, e-commerce Shopify, data et développement web. Xiaomi & TECNO.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F7F3EC",
-  "theme_color": "#F7F3EC",
+  "background_color": "#2539F5",
+  "theme_color": "#2539F5",
   "orientation": "any",
   "icons": [
     { "src": "images/marcelassogba 2.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
