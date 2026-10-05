@@ -42,6 +42,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<script src="/js/theme.js"></script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -153,7 +154,7 @@ section{position:relative}
 
 /* HERO */
 .hero{padding:150px 0 40px}
-.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
 .hero .h-xl{margin:1.4rem 0 1.6rem}
 .hero p.lead{font-size:1.05rem;max-width:36ch;color:var(--soft);margin-bottom:2rem}
 
@@ -182,11 +183,12 @@ section{position:relative}
 /* COLLAB LOGOS STRIP */
 .collab{padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .collab .lbl{text-align:center;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.4rem}
-.collab-row{display:flex;align-items:center;justify-content:center;gap:2.6rem;flex-wrap:wrap}
-.collab-logo{display:flex;align-items:center;gap:.5rem;font-family:var(--head);font-weight:700;font-size:1.2rem;background:var(--cream);color:var(--dark);padding:.7rem 1.3rem;border-radius:99px;
+.collab-row{display:flex;align-items:center;justify-content:center;gap:clamp(1.4rem,5vw,3.2rem);flex-wrap:wrap}
+.collab-logo{display:flex;align-items:center;gap:.5rem;font-family:var(--head);font-weight:700;font-size:1.2rem;
   transition:opacity .3s,transform .3s}
 .collab-logo:hover{transform:translateY(-2px)}
-.collab-logo img{height:26px;width:auto;object-fit:contain}
+.collab-logo img{height:clamp(34px,5vw,46px);width:auto;max-width:100%;object-fit:contain}
+.collab-logo img.tecno{height:clamp(18px,3.2vw,30px);filter:brightness(0) invert(1)}
 .collab-people{display:flex;align-items:center;gap:.7rem}
 .collab-people .stack-av img,.collab-people .stack-av span{width:36px;height:36px}
 
@@ -333,10 +335,10 @@ section{position:relative}
 .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start;margin-top:2.4rem}
 .about-photo{border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:4/5;box-shadow:0 24px 60px rgba(5,10,70,.18)}
 .about-photo img{width:100%;height:100%;object-fit:cover}
-.about-photo .ov{position:absolute;left:12px;right:12px;bottom:12px;display:flex;gap:10px}
-.about-photo .ov div{flex:1;background:rgba(5,10,70,.75);backdrop-filter:blur(8px);color:#fff;border-radius:14px;padding:.6rem .7rem}
-.about-photo .ov b{font-family:var(--head);font-size:1.2rem;font-weight:600;display:block}
-.about-photo .ov small{font-size:.68rem;color:#e6ddd0}
+.about-photo .ov{position:absolute;left:12px;right:12px;bottom:12px;display:flex;gap:8px}
+.about-photo .ov div{flex:1;min-width:0;background:rgba(5,10,70,.75);backdrop-filter:blur(8px);color:#fff;border-radius:14px;padding:.6rem .65rem}
+.about-photo .ov b{font-family:var(--head);font-size:1.25rem;font-weight:800;letter-spacing:-.03em;display:block}
+.about-photo .ov small{display:block;font-size:.66rem;line-height:1.25;color:#e6ddd0}
 .about-bio p{color:var(--soft);margin-bottom:1rem}
 .about-bio strong{color:var(--ink)}
 .about-stats{display:flex;gap:2rem;margin:1.6rem 0 2rem}
@@ -441,8 +443,6 @@ section{position:relative}
 .stack-cat:hover{border-color:rgba(255,201,64,.4)}
 .flags{display:flex;gap:.35rem;margin-top:.55rem}
 .flags img{width:27px;height:auto;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
-.collab-logo img{height:36px;width:auto}
-.collab-row{gap:3.2rem}
 .m-item{background:var(--cream);border-color:transparent}
 .m-item img{width:22px;height:22px;object-fit:contain}
 .reel-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
@@ -537,6 +537,52 @@ section{position:relative}
 .art-card h3{font-family:var(--head);font-weight:700;font-size:1.08rem;margin:.4rem 0 .5rem;letter-spacing:-.01em}
 .art-card p{font-size:.88rem;color:var(--muted);line-height:1.5}
 
+/* ===== Vidéo de présentation (hero sur PC/tablette, avant la boîte à outils sur mobile) ===== */
+.hero-video{min-width:0}
+.pv{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:#f5f0e8;
+  box-shadow:0 30px 70px rgba(5,10,70,.4),0 0 0 1px var(--line)}
+.pv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.pv-tag{position:absolute;top:14px;left:14px;z-index:2;display:flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.92);
+  color:var(--dark);font-size:.72rem;font-weight:700;padding:.35rem .75rem;border-radius:99px;backdrop-filter:blur(6px);pointer-events:none}
+.pv-sound{position:absolute;right:14px;bottom:14px;z-index:2;display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
+  font-family:var(--body);font-weight:700;font-size:.82rem;padding:.55rem .95rem;border-radius:99px;border:0;color:var(--on-accent);
+  background:linear-gradient(180deg,#ffdb72,#ffbd1f);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.65),inset 0 -3px 0 rgba(150,92,0,.4),0 8px 18px rgba(5,10,70,.3);
+  transition:transform .22s var(--ease),filter .25s}
+.pv-sound:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.pv-sound:active{transform:translateY(1px) scale(.98)}
+.pv-sound svg{width:15px;height:15px}
+.pv.sound .pv-sound,.pv.sound .pv-tag{display:none}
+.pv-mobile{display:none;padding:34px 0 0}
+@media(min-width:721px){.hero-logo{display:none}}
+@media(max-width:720px){.hero-video{display:none}.pv-mobile{display:block}}
+
+/* ===== Thème sombre (bouton du header, mémorisé par js/theme.js) ===== */
+.theme-btn{width:38px;height:38px;flex-shrink:0;border-radius:50%;border:1px solid var(--line);background:var(--chip);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .25s var(--ease),background .25s}
+.theme-btn:hover{transform:rotate(18deg) scale(1.06)}
+.theme-btn svg{width:17px;height:17px}
+.theme-btn .i-sun{display:none}
+[data-theme="dark"] .theme-btn .i-sun{display:block}
+[data-theme="dark"] .theme-btn .i-moon{display:none}
+[data-theme="dark"]{
+  --page:#05060c;--paper:#0b0d19;--paper2:#151829;--black:#151829;
+  --taupe:#8f96c9;--muted:#b9bdd9;--muted-d:#a9aed0;--soft:#d9dbee;
+  --line:rgba(247,242,232,.14);--line-d:rgba(247,242,232,.12);--ic-fg:#10154a;
+}
+[data-theme="dark"] :is(.nav,.contact-pill,.badge-float,.ads,.block-dark,.footer,.plan.dark,.stack-cat,.testi-card,.acc-item,.faq-cta,.result-card,.art-card){--ink:#F7F2E8;--soft:#d9dbee;--muted:#a9aed0;--muted-d:#a9aed0;--taupe:#8f96c9;--accent-t:#FFC940;
+  --line:rgba(247,242,232,.12);--line-d:rgba(247,242,232,.12);--chip:rgba(247,242,232,.09);--inv:#10154a;
+  --gh-1:rgba(255,255,255,.12);--gh-2:rgba(255,255,255,.02)}
+[data-theme="dark"] .nav{background:rgba(21,24,41,.86)}
+[data-theme="dark"] :is(.contact-pill,.badge-float){background:rgba(21,24,41,.9)}
+[data-theme="dark"] .nav .links.on{background:#151829}
+[data-theme="dark"] .exp-card{background:#20254a}
+[data-theme="dark"] .exp-card:first-child{background:var(--accent)}
+[data-theme="dark"] .plan{background:rgba(247,242,232,.03)}
+[data-theme="dark"] .modal-close{background:#20254a;color:var(--ink)}
+[data-theme="dark"] .footer-logo{filter:none}
+[data-theme="dark"] .pv{box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 0 1px var(--line)}
+
 /* ===== RESPONSIVE (tous écrans) ===== */
 @media(max-width:1100px){
   .reels{grid-template-columns:repeat(3,1fr)}
@@ -564,7 +610,6 @@ section{position:relative}
   .ads,.block-dark,.footer{margin:8px;padding:50px 0}
   .block-dark .foot-note,.testi-head{flex-direction:column;align-items:flex-start}
   .modal-gallery{grid-template-columns:repeat(2,1fr)}
-  .collab-row{gap:1.8rem}
   .proj-foot h3{font-size:1.2rem}
 }
 @media(max-width:520px){
@@ -582,7 +627,6 @@ section{position:relative}
   .contact-pill{padding:.45rem}
   .stack-cats,.footer-cols,.modal-gallery{grid-template-columns:1fr}
   .about-stats{gap:1.3rem;flex-wrap:wrap}
-  .about-photo .ov{flex-direction:column}
   .proof{flex-wrap:wrap}
   .plan,.stack-cat,.exp-card,.testi-card,.faq-cta,.modal-card{padding:1.4rem}
   .modal-metrics{gap:1rem}
@@ -740,6 +784,7 @@ section{position:relative}
     <a href="/blog">Blog</a>
     <a href="#contact" class="cta">Contact</a>
   </div>
+  <button class="theme-btn" type="button" data-theme-toggle aria-label="Passer au thème sombre" aria-pressed="false"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
   <button class="burger" id="burger" aria-label="Menu"><span></span></button>
 </nav>
 
@@ -792,6 +837,14 @@ section{position:relative}
           <div class="logo-orbit two"></div>
           <img class="logo-m" src="images/marcelassogba 2.png" alt="Logo Marcel Assogba">
         </div>
+        <!-- Vidéo de présentation : ici sur PC/tablette, déplacée avant « Ma boîte à outils » sur mobile -->
+        <div class="hero-video reveal" data-d="2" id="pvHero">
+          <div class="pv" id="pv">
+            <video id="pvVideo" src="videos/marcel-assogba-presentation-son.mp4" poster="images/covers/presentation.jpg" muted loop playsinline preload="none" aria-label="Vidéo de présentation de Marcel Assogba"></video>
+            <span class="pv-tag">▶ Présentation · 1 min 30</span>
+            <button class="pv-sound" id="pvSound" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg> Activer le son</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -801,7 +854,7 @@ section{position:relative}
     <div class="wrap">
       <p class="lbl reveal">Ils m'ont fait confiance</p>
       <div class="collab-row reveal" data-d="1">
-        <div class="collab-logo"><img src="images/tecno-logo.svg" alt="TECNO"></div>
+        <div class="collab-logo"><img class="tecno" src="images/tecno-logo.svg" alt="TECNO"></div>
         <div class="collab-logo"><img src="images/xiaomi-logo.svg" alt="Xiaomi"></div>
         <div class="collab-people">
           <div class="stack-av">
@@ -815,6 +868,9 @@ section{position:relative}
       </div>
     </div>
   </section>
+
+  <!-- VIDÉO DE PRÉSENTATION (mobile uniquement) -->
+  <div class="pv-mobile"><div class="wrap" id="pvMobile"></div></div>
 
   <!-- TECH STACK -->
   <section class="stack-sec" id="stack">
@@ -848,7 +904,7 @@ section{position:relative}
         <div class="proj-card reveal" data-d="1" onclick="openProject('xiaomi')">
           <div class="proj-media"><span class="logo-badge"><img src="images/xiaomi-logo.svg" alt="">Xiaomi</span><img src="images/xiaomi-17t.jpg" alt="Xiaomi"></div>
           <div class="proj-foot"><div><h3>Xiaomi</h3><p>Digital régional multi-pays · Afrique</p></div><span class="view">View Project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
-          <div class="proj-tags"><span class="tag">Stratégie</span><span class="tag">Multi-pays</span><span class="tag">Ads · Data</span></div>
+          <div class="proj-tags"><span class="tag">Stratégie</span><span class="tag">Multi-pays</span><span class="tag">0 → 500K</span></div>
         </div>
         <div class="proj-card reveal" onclick="openProject('ecom')">
           <div class="proj-media"><span class="logo-badge">MI Market · mimarket.ci</span><img src="images/covers/mimarket-1.jpg" alt="mimarket.ci"></div>
@@ -914,11 +970,11 @@ section{position:relative}
       <div class="about-grid">
         <div class="about-photo reveal">
           <img src="images/marcel-portrait.jpg" alt="Marcel Assogba">
-          <div class="ov"><div><b>32M+</b><small>Vues générées · 2024</small></div><div><b>400K</b><small>Communauté TECNO</small></div></div>
+          <div class="ov"><div><b>100M+</b><small>Vues générées · tous réseaux</small></div><div><b>500K</b><small>TikTok Xiaomi · parti de 0</small></div><div><b>400K</b><small>TikTok TECNO · parti de 2K</small></div></div>
         </div>
         <div class="about-bio reveal" data-d="1">
-          <p>Je suis <strong>Marcel Assogba</strong>, Regional Digital Manager basé à Abidjan, Côte d'Ivoire. Chez Xiaomi, je pilote le digital sur plusieurs marchés africains : Côte d'Ivoire, Burkina Faso, Ghana, Cameroun, Angola et d'autres.</p>
-          <p>Avant cela, Digital Specialist chez TECNO Mobile : campagnes, direction créative, contenu et lancements produits (CAMON, SPARK, PHANTOM, POP) sur TikTok, Facebook, Instagram et YouTube.</p>
+          <p>Je suis <strong>Marcel Assogba</strong>, Regional Digital Manager basé à Abidjan, Côte d'Ivoire. Chez Xiaomi, je pilote le digital sur plusieurs marchés africains : Côte d'Ivoire, Burkina Faso, Ghana, Cameroun, Angola et d'autres — et j'y ai fait grandir le compte TikTok de 0 à 500K abonnés.</p>
+          <p>Avant cela, Digital Specialist chez TECNO Mobile : campagnes, direction créative, contenu et lancements produits (CAMON, SPARK, PHANTOM, POP) sur TikTok, Facebook, Instagram et YouTube, avec une communauté TikTok passée de 2K à 400K abonnés. Au total, plus de 100 millions de vues générées, tous réseaux confondus.</p>
           <p>Je suis aussi expert e-commerce — j'ai lancé plusieurs business en ligne — et spécialiste des ads créatives (Meta, TikTok, Google Ads) pilotées par la data et l'IA générative vidéo, complété par le développement web.</p>
           <div class="about-stats">
             <div><div class="n" data-count="5">0</div><small>Ans d'expérience</small></div>
@@ -1016,9 +1072,9 @@ section{position:relative}
         <a href="/blog" class="btn btn-light reveal" data-d="1">Voir tous les articles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
       </div>
       <div class="blog-grid">
-        <a class="art-card reveal" href="/marketing-digital-cote-divoire"><div class="thumb"><img class="ph" src="images/marcel-portrait.jpg" alt="Marcel Assogba, Regional Digital Manager à Abidjan" loading="lazy"><span>Marketing digital en Côte d'Ivoire : le guide complet</span></div><div class="bd"><div class="cat">Guide pilier</div><h3>Marketing digital en Côte d'Ivoire</h3><p>La stratégie complète pour trouver des clients en ligne en 2026.</p></div></a>
-        <a class="art-card b2 reveal" href="/publicite-facebook-instagram-cote-divoire"><div class="thumb"><img class="ph" src="images/resultat-3.jpg" alt="Résultats de campagnes Meta Ads" loading="lazy"><span>Publicité Facebook &amp; Instagram en Côte d'Ivoire</span></div><div class="bd"><div class="cat">Meta Ads</div><h3>Pub Facebook &amp; Instagram</h3><p>Ciblage, budget FCFA, paiement et créatives qui convertissent.</p></div></a>
-        <a class="art-card b5 reveal" href="/prix-publicite-en-ligne-cote-divoire"><div class="thumb"><img class="ph" src="images/resultat-1.jpg" alt="Tableau de résultats e-commerce" loading="lazy"><span>Combien coûte la publicité en ligne en Côte d'Ivoire ?</span></div><div class="bd"><div class="cat">Tarifs</div><h3>Prix de la pub en ligne</h3><p>Budget média, honoraires freelance vs agence et calcul du ROI.</p></div></a>
+        <a class="art-card reveal" href="/marketing-digital-cote-divoire"><div class="thumb"><img class="ph" src="images/blog/art-marketing.jpg" alt="Commerçante ivoirienne qui utilise son smartphone pour vendre en ligne" loading="lazy"><span>Marketing digital en Côte d'Ivoire : le guide complet</span></div><div class="bd"><div class="cat">Guide pilier</div><h3>Marketing digital en Côte d'Ivoire</h3><p>La stratégie complète pour trouver des clients en ligne en 2026.</p></div></a>
+        <a class="art-card b2 reveal" href="/publicite-facebook-instagram-cote-divoire"><div class="thumb"><img class="ph" src="images/blog/art-meta.jpg" alt="Smartphone affichant les applications Facebook, Instagram et WhatsApp" loading="lazy"><span>Publicité Facebook &amp; Instagram en Côte d'Ivoire</span></div><div class="bd"><div class="cat">Meta Ads</div><h3>Pub Facebook &amp; Instagram</h3><p>Ciblage, budget FCFA, paiement et créatives qui convertissent.</p></div></a>
+        <a class="art-card b5 reveal" href="/prix-publicite-en-ligne-cote-divoire"><div class="thumb"><img class="ph" src="images/blog/art-prix.jpg" alt="Calcul d'un budget publicitaire avec ordinateur portable et calculatrice" loading="lazy"><span>Combien coûte la publicité en ligne en Côte d'Ivoire ?</span></div><div class="bd"><div class="cat">Tarifs</div><h3>Prix de la pub en ligne</h3><p>Budget média, honoraires freelance vs agence et calcul du ROI.</p></div></a>
       </div>
     </div>
   </section>
@@ -1105,6 +1161,21 @@ navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlink
 
 /* reveal : initialisé en fin de script (après le contenu dynamique) */
 
+/* vidéo de présentation : hero (PC/tablette) ou avant la boîte à outils (mobile) */
+(function(){
+  const pv=document.getElementById('pv'),v=document.getElementById('pvVideo'),btn=document.getElementById('pvSound');
+  const mq=matchMedia('(max-width:720px)');
+  const place=()=>document.getElementById(mq.matches?'pvMobile':'pvHero').appendChild(pv);
+  place();mq.addEventListener('change',place);
+  // lecture muette uniquement quand la vidéo est visible (rien n'est téléchargé avant)
+  new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){if(v.muted)v.play().catch(()=>{});}else v.pause();
+  }),{threshold:.35}).observe(pv);
+  btn.addEventListener('click',()=>{
+    v.muted=false;v.loop=false;v.controls=true;v.currentTime=0;pv.classList.add('sound');v.play().catch(()=>{});
+  });
+})();
+
 /* count up */
 const cio=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const t=+el.dataset.count;const suf=el.dataset.suffix||'';let n=0;const s=Math.max(1,Math.round(t/40));const iv=setInterval(()=>{n+=s;if(n>=t){n=t;clearInterval(iv);}el.textContent=n+suf;},28);cio.unobserve(el);})},{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
@@ -1160,13 +1231,13 @@ lb.addEventListener('click',e=>{if(e.target===lb)closeVideo();});
 /* PROJECT MODAL */
 const PROJECTS={
  tecno:{role:'Digital Specialist',title:'TECNO Mobile',
-   desc:"Direction créative, production de contenu et social media pour TECNO Mobile. Campagnes, lancements produits (CAMON, SPARK, PHANTOM, POP) et activation sur TikTok, Facebook, Instagram et YouTube — avec une communauté passée de 2K à 400K abonnés en moins d'un an.",
-   metrics:[['2K → 400K','Communauté TikTok'],['32M+','Vues · 2024'],['4','Gammes lancées']],
+   desc:"Direction créative, production de contenu et social media pour TECNO Mobile. Campagnes, lancements produits (CAMON, SPARK, PHANTOM, POP) et activation sur TikTok, Facebook, Instagram et YouTube — avec une communauté TikTok passée de 2K à 400K abonnés en moins d'un an.",
+   metrics:[['2K → 400K','Abonnés TikTok'],['4','Gammes lancées'],['4','Réseaux animés']],
    imgs:['images/camon%2040.jpg','images/spark%2040.jpg','images/phantom.jpg'],
    tags:['Social Media','Creative Ads','Événementiel','Lancements']},
  xiaomi:{role:'Regional Digital Manager',title:'Xiaomi',
-   desc:"Pilotage de la stratégie digitale de Xiaomi sur plusieurs marchés africains (Côte d'Ivoire, Burkina Faso, Ghana, Cameroun, Angola…) : campagnes, e-commerce, ads créatives Meta/TikTok/Google, data & performance et lancements produits REDMI et séries T.",
-   metrics:[['5+','Marchés pilotés'],['Multi','Gammes REDMI/Note/T'],['Data','Performance']],
+   desc:"Pilotage de la stratégie digitale de Xiaomi sur plusieurs marchés africains (Côte d'Ivoire, Burkina Faso, Ghana, Cameroun, Angola…) : campagnes, e-commerce, ads créatives Meta/TikTok/Google, data & performance et lancements produits REDMI et séries T — avec un compte TikTok passé de 0 à 500K abonnés.",
+   metrics:[['0 → 500K','Abonnés TikTok'],['5+','Marchés pilotés'],['Multi','Gammes REDMI/Note/T']],
    imgs:['images/xiaomi-17t.jpg','images/redmi-note15.jpg','images/redmi-15c.jpg','images/redmi-a7.jpg'],
    tags:['Stratégie','Multi-pays','Meta · TikTok · Google','E-commerce']},
  ecom:{role:'Entrepreneur E-commerce',title:'Business E-commerce',
