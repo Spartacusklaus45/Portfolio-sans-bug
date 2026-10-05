@@ -43,6 +43,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
 <script src="/js/theme.js"></script>
+<script src="/js/cursor.js" defer></script>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -219,7 +220,7 @@ section{position:relative}
 .projects{padding:70px 0;border-top:1px solid var(--line)}
 .sec-head{margin-bottom:2.6rem}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-.proj-card{cursor:pointer}
+.proj-card{cursor:pointer;will-change:transform,opacity;transform-origin:50% 0}
 .proj-media{border-radius:var(--r);overflow:hidden;aspect-ratio:16/11;position:relative;box-shadow:0 20px 50px rgba(5,10,70,.14)}
 .proj-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
 .proj-card:hover .proj-media img{transform:scale(1.05)}
@@ -896,22 +897,22 @@ section{position:relative}
     <div class="wrap">
       <h2 class="h-lg sec-head reveal">Mes derniers <span class="hi">projets</span></h2>
       <div class="grid2">
-        <div class="proj-card reveal" onclick="openProject('tecno')">
+        <div class="proj-card" onclick="openProject('tecno')">
           <div class="proj-media"><span class="logo-badge"><img src="images/tecno-logo.svg" alt="">TECNO</span><img src="images/camon%2040.jpg" alt="TECNO Mobile"></div>
           <div class="proj-foot"><div><h3>TECNO Mobile</h3><p>Direction digitale & lancements produits</p></div><span class="view">View Project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
           <div class="proj-tags"><span class="tag">Social Media</span><span class="tag">Ads</span><span class="tag">2K → 400K</span></div>
         </div>
-        <div class="proj-card reveal" data-d="1" onclick="openProject('xiaomi')">
+        <div class="proj-card" onclick="openProject('xiaomi')">
           <div class="proj-media"><span class="logo-badge"><img src="images/xiaomi-logo.svg" alt="">Xiaomi</span><img src="images/xiaomi-17t.jpg" alt="Xiaomi"></div>
           <div class="proj-foot"><div><h3>Xiaomi</h3><p>Digital régional multi-pays · Afrique</p></div><span class="view">View Project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
           <div class="proj-tags"><span class="tag">Stratégie</span><span class="tag">Multi-pays</span><span class="tag">0 → 500K</span></div>
         </div>
-        <div class="proj-card reveal" onclick="openProject('ecom')">
+        <div class="proj-card" onclick="openProject('ecom')">
           <div class="proj-media"><span class="logo-badge">MI Market · mimarket.ci</span><img src="images/covers/mimarket-1.jpg" alt="mimarket.ci"></div>
           <div class="proj-foot"><div><h3>E-commerce</h3><p>Boutiques en ligne lancées de A à Z</p></div><span class="view">View Project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
           <div class="proj-tags"><span class="tag">Shopify</span><span class="tag">Acquisition</span><span class="tag">Conversion</span></div>
         </div>
-        <div class="proj-card reveal" data-d="1" onclick="openProject('web')">
+        <div class="proj-card" onclick="openProject('web')">
           <div class="proj-media grad grad-purple"><svg width="76" height="76" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 8px 18px rgba(0,0,0,.35))"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 9h20"/><path d="M6 6.5h.01M9 6.5h.01"/><path d="M8 13l2 2 4-4"/></svg></div>
           <div class="proj-foot"><div><h3>Sites & Agences</h3><p>Sites web pour organisations & entreprises</p></div><span class="view">View Project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
           <div class="proj-tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span></div>
@@ -1276,11 +1277,30 @@ imglb.addEventListener('click',e=>{if(e.target===imglb)closeImg();});
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeVideo();closeModal();closeImg();}});
 
+/* ===== Cartes « Mes derniers projets » : descendent du haut en suivant le défilement ===== */
+(function(){
+  const cards=[...document.querySelectorAll('.proj-card')];
+  if(!cards.length||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const cur=cards.map(()=>0);
+  function update(){
+    const vh=innerHeight,cols=innerWidth>720?2:1;
+    cards.forEach((c,i)=>{
+      const top=c.getBoundingClientRect().top-cur[i];           // position réelle, sans le décalage en cours
+      let p=(vh*.98-top)/(vh*.6)-(i%cols)*.14;                  // progression liée au scroll, décalée par colonne
+      p=Math.max(0,Math.min(1,p));
+      const e=1-Math.pow(1-p,3),side=cols>1?(i%2?1:-1):(i%2?1:-1)*.5;
+      cur[i]=-(1-e)*170;
+      c.style.transform=`translate3d(0,${cur[i]}px,0) rotate(${(1-e)*5*side}deg) scale(${.88+.12*e})`;
+      c.style.opacity=Math.max(0,Math.min(1,(p-.25)*2.2));        // n'apparaît qu'une fois proche de sa place
+    });
+  }
+  addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
+})();
+
 /* ===== SCROLL REVEAL (variantes uniques + cascade) ===== */
 (function(){
   const setVar=(sel,cls)=>document.querySelectorAll(sel).forEach(e=>e.classList.add('reveal',cls));
   // une animation propre à chaque type de section
-  setVar('.proj-card','rv-scale');
   setVar('.reel','rv-scale');
   setVar('.result-card','rv-scale');
   setVar('.testi-card','rv-scale');
