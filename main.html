@@ -540,7 +540,7 @@ section{position:relative}
 
 /* ===== Vidéo de présentation (hero sur PC/tablette, avant la boîte à outils sur mobile) ===== */
 .hero-video{min-width:0}
-.pv{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:#f5f0e8;
+.pv{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/9;background:#0b0d19;
   box-shadow:0 30px 70px rgba(5,10,70,.4),0 0 0 1px var(--line)}
 .pv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .pv-tag{position:absolute;top:14px;left:14px;z-index:2;display:flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.92);
@@ -842,7 +842,7 @@ section{position:relative}
         <div class="hero-video reveal" data-d="2" id="pvHero">
           <div class="pv" id="pv">
             <video id="pvVideo" src="videos/marcel-assogba-presentation-son.mp4" poster="images/covers/presentation.jpg" muted loop playsinline preload="none" aria-label="Vidéo de présentation de Marcel Assogba"></video>
-            <span class="pv-tag">▶ Présentation · 1 min 30</span>
+            <span class="pv-tag">▶ Présentation · 1 min</span>
             <button class="pv-sound" id="pvSound" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg> Activer le son</button>
           </div>
         </div>
